@@ -1,5 +1,5 @@
-function App() {
-  return <p>Hello world</p>
-}
+import { Layout } from './views';
 
-export default App
+export const App = () => {
+  return <Layout />;
+};

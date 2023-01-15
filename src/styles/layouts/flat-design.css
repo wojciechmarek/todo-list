@@ -1,0 +1,9 @@
+[data-theme='flat-design-light'] {
+  --background-color: #777cad;
+  --primary-color: #bdc6d0;
+}
+
+[data-theme='flat-design-dark'] {
+  --background-color: #27292e;
+  --primary-color: #1a1c1e;
+}
