@@ -18,6 +18,7 @@ All design styles are written from scratch. This application does not use any UI
 - 🎁 **Project:** vite, react, typescript
 - 🛠️ **Tools:** yarn, eslint, prettier, husky, speedy web compiler, conventional commits
 - 🎨 **Styling:** styled-components by emotion
+- 💎 **Others:** mobile first approach, atomic design, progressive web app
 
 ## How to run
 
