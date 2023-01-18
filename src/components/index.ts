@@ -1,2 +1,2 @@
-export * from './Button';
-export * from './Navbar';
+export * from './atoms';
+export * from './organisms';
