@@ -1,6 +1,16 @@
 import styled from '@emotion/styled';
 import { IconButton } from '../../atoms';
 
+// Common
+
+const NavbarMenuButton = styled(IconButton)`
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 0.45em;
+  background-color: var(--primary-button-color);
+  color: var(--font-color);
+`;
+
 // Mobile Navbar
 
 export const MobileNavbar = styled.nav`
@@ -32,26 +42,20 @@ export const MobileNavbarTitle = styled.p`
   font-weight: 600;
 `;
 
-export const MobileNavbarMenuButton = styled(IconButton)`
+export const MobileNavbarMenuButton = styled(NavbarMenuButton)`
   margin-left: 0.75em;
-  height: 2.5em;
-  width: 2.5em;
-  border-radius: 0.45em;
-  background-color: var(--primary-button-color);
-  color: var(--font-color);
-
-  svg {
-    height: 1.55em;
-    width: 1.55em;
-  }
 `;
 
 // Desktop Navbar
 
 export const DesktopNavbar = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
   height: calc(100% - 2em);
-  width: 100px;
-  margin: 1em 0px 1em 1em;
+  width: 4em;
+  margin: 0.75em 0 0.75em 0.75em;
   background-color: var(--primary-color);
   border-radius: var(--standard-border-radius);
 
@@ -60,14 +64,21 @@ export const DesktopNavbar = styled.nav`
   }
 `;
 
-export const DesktopNavbarTitleAndButton = styled.div``;
+export const DesktopNavbarTitleAndButton = styled.div`
+  display: flex;
+  margin: 0.75em 0 0 0.75em;
+`;
 
-export const DesktopNavbarTitle = styled.div``;
+export const DesktopNavbarTitle = styled.div`
+  display: none;
+`;
 
-export const DesktopNavbarButton = styled.div``;
+export const DesktopNavbarMenuButton = styled(NavbarMenuButton)``;
 
 export const NavbarDivider = styled.div``;
 
-export const DesktopNavbarList = styled.div``;
+export const DesktopNavbarList = styled.div`
+  flex-grow: 1;
+`;
 
 export const DesktopNavbarItem = styled.div``;

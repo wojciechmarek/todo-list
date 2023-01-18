@@ -2,7 +2,6 @@ import {
   DesktopNavbar,
   DesktopNavbarItem,
   DesktopNavbarList,
-  DesktopNavbarButton,
   NavbarDivider,
   DesktopNavbarTitle,
   DesktopNavbarTitleAndButton,
@@ -10,6 +9,7 @@ import {
   MobileNavbarTitle,
   MobileNavbarMenuButton,
   MobileNavbarEmptySpace,
+  DesktopNavbarMenuButton,
 } from './navbar.styled';
 
 import { Bars3Icon } from '@heroicons/react/24/outline';
@@ -27,7 +27,9 @@ export const Navbar = () => {
       <DesktopNavbar>
         <DesktopNavbarTitleAndButton>
           <DesktopNavbarTitle>Navbar</DesktopNavbarTitle>
-          <DesktopNavbarButton />
+          <DesktopNavbarMenuButton>
+            <Bars3Icon />
+          </DesktopNavbarMenuButton>
         </DesktopNavbarTitleAndButton>
         <NavbarDivider />
         <DesktopNavbarList>
