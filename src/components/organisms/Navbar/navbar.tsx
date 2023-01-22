@@ -13,21 +13,26 @@ import {
 } from './navbar.styled';
 
 import { Bars3Icon } from '@heroicons/react/24/outline';
+import { useNavbar } from './navbar.hook';
 
 export const Navbar = () => {
+  const { isExpanded, toggleExpand } = useNavbar();
+
   return (
     <>
-      <MobileNavbar>
-        <MobileNavbarMenuButton>
+      <MobileNavbar expanded={isExpanded}>
+        <MobileNavbarMenuButton onClick={toggleExpand}>
           <Bars3Icon />
         </MobileNavbarMenuButton>
         <MobileNavbarTitle>Lorem ipsum</MobileNavbarTitle>
         <MobileNavbarEmptySpace />
       </MobileNavbar>
-      <DesktopNavbar>
+      <DesktopNavbar expanded={isExpanded}>
         <DesktopNavbarTitleAndButton>
-          <DesktopNavbarTitle>Navbar</DesktopNavbarTitle>
-          <DesktopNavbarMenuButton>
+          <DesktopNavbarTitle expanded={isExpanded}>
+            TODO List
+          </DesktopNavbarTitle>
+          <DesktopNavbarMenuButton onClick={toggleExpand}>
             <Bars3Icon />
           </DesktopNavbarMenuButton>
         </DesktopNavbarTitleAndButton>

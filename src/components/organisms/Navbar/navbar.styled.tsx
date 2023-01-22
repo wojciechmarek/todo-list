@@ -9,12 +9,18 @@ const NavbarMenuButton = styled(IconButton)`
   border-radius: 0.45em;
   background-color: var(--primary-button-color);
   color: var(--font-color);
+  transition: filter 0.3s ease-in-out;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 `;
 
 // Mobile Navbar
 
-export const MobileNavbar = styled.nav`
-  height: 4em;
+export const MobileNavbar = styled.nav<{ expanded: boolean }>`
+  display: flex;
+  height: ${(props) => (props.expanded ? '10em' : '4em')};
   width: calc(100% - 2em);
   margin: 0.75em 0.75em 0 0.75em;
   background-color: var(--primary-color);
@@ -23,10 +29,8 @@ export const MobileNavbar = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  display: none;
-
-  @media screen and (max-width: 768px) {
-    display: flex;
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 `;
 
@@ -48,37 +52,64 @@ export const MobileNavbarMenuButton = styled(NavbarMenuButton)`
 
 // Desktop Navbar
 
-export const DesktopNavbar = styled.nav`
+export const DesktopNavbar = styled.nav<{ expanded: boolean }>`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: space-between;
+  align-items: center;
   height: calc(100% - 2em);
-  width: 4em;
+  width: ${(props) => (props.expanded ? '10em' : '4em')};
   margin: 0.75em 0 0.75em 0.75em;
   background-color: var(--primary-color);
   border-radius: var(--standard-border-radius);
+  transition: width 0.3s ease-in-out;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;
 
 export const DesktopNavbarTitleAndButton = styled.div`
+  position: relative;
   display: flex;
-  margin: 0.75em 0 0 0.75em;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.75em;
+  height: 2.5em;
+  width: calc(100% - 1.5em);
 `;
 
-export const DesktopNavbarTitle = styled.div`
-  display: none;
+export const DesktopNavbarTitle = styled.p<{ expanded: boolean }>`
+  display: ${(props) => (props.expanded ? 'block' : 'none')};
+  color: var(--primary-text-color);
+  text-overflow: clip; // This is needed to make the text wrap
+  white-space: pre-line; // This is needed to make the text wrap
+  font-size: 1em;
+  font-weight: 600;
+  cursor: default;
 `;
 
-export const DesktopNavbarMenuButton = styled(NavbarMenuButton)``;
+export const DesktopNavbarMenuButton = styled(NavbarMenuButton)`
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+`;
 
-export const NavbarDivider = styled.div``;
+export const NavbarDivider = styled.div`
+  height: 0.05em;
+  width: calc(100% - 1.5em);
+
+  background-color: var(--primary-button-color);
+`;
 
 export const DesktopNavbarList = styled.div`
   flex-grow: 1;
+
+  margin: 0.75em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const DesktopNavbarItem = styled.div``;
