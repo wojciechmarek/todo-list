@@ -20,7 +20,7 @@ const NavbarMenuButton = styled(IconButton)`
 
 export const MobileNavbar = styled.nav<{ expanded: boolean }>`
   display: flex;
-  height: ${(props) => (props.expanded ? '10em' : '4em')};
+  height: 4em;
   width: calc(100% - 2em);
   margin: 0.75em 0.75em 0 0.75em;
   background-color: var(--primary-color);
