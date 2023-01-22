@@ -12,7 +12,7 @@ import {
   DesktopNavbarMenuButton,
 } from './navbar.styled';
 
-import { Bars3Icon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useNavbar } from './navbar.hook';
 
 export const Navbar = () => {
@@ -22,7 +22,7 @@ export const Navbar = () => {
     <>
       <MobileNavbar expanded={isExpanded}>
         <MobileNavbarMenuButton onClick={toggleExpand}>
-          <Bars3Icon />
+          {isExpanded ? <XMarkIcon /> : <Bars3Icon />}
         </MobileNavbarMenuButton>
         <MobileNavbarTitle>Lorem ipsum</MobileNavbarTitle>
         <MobileNavbarEmptySpace />
@@ -32,8 +32,8 @@ export const Navbar = () => {
           <DesktopNavbarTitle expanded={isExpanded}>
             TODO List
           </DesktopNavbarTitle>
-          <DesktopNavbarMenuButton onClick={toggleExpand}>
-            <Bars3Icon />
+          <DesktopNavbarMenuButton onClick={toggleExpand} expanded={isExpanded}>
+            {isExpanded ? <XMarkIcon /> : <Bars3Icon />}
           </DesktopNavbarMenuButton>
         </DesktopNavbarTitleAndButton>
         <NavbarDivider />

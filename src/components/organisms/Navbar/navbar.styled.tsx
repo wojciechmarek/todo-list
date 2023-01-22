@@ -20,7 +20,7 @@ const NavbarMenuButton = styled(IconButton)`
 
 export const MobileNavbar = styled.nav<{ expanded: boolean }>`
   display: flex;
-  height: 4em;
+  height: 4.5em;
   width: calc(100% - 2em);
   margin: 0.75em 0.75em 0 0.75em;
   background-color: var(--primary-color);
@@ -53,18 +53,18 @@ export const MobileNavbarMenuButton = styled(NavbarMenuButton)`
 // Desktop Navbar
 
 export const DesktopNavbar = styled.nav<{ expanded: boolean }>`
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   height: calc(100% - 2em);
-  width: ${(props) => (props.expanded ? '10em' : '4em')};
-  margin: 0.75em 0 0.75em 0.75em;
+  width: ${(props) => (props.expanded ? '15em' : '4.25em')};
+  margin: 0.75em;
   background-color: var(--primary-color);
   border-radius: var(--standard-border-radius);
   transition: width 0.3s ease-in-out;
 
-  @media screen and (max-width: 767px) {
-    display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 `;
 
@@ -88,9 +88,11 @@ export const DesktopNavbarTitle = styled.p<{ expanded: boolean }>`
   cursor: default;
 `;
 
-export const DesktopNavbarMenuButton = styled(NavbarMenuButton)`
+export const DesktopNavbarMenuButton = styled(NavbarMenuButton)<{
+  expanded: boolean;
+}>`
   cursor: pointer;
-  position: absolute;
+  position: ${(props) => (props.expanded ? 'absolute' : 'relative')};
   right: 0;
   top: 0;
 `;
