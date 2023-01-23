@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
 export interface IconButtonProps {
-  children: ReactNode;
+  icon: ReactNode;
   [key: string]: unknown;
 }

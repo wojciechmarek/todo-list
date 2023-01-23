@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import { IconButton } from '../../atoms';
+import { IconButton } from '../../molecules';
 
 // Common
 
-const NavbarMenuButton = styled(IconButton)`
+export const NavbarMenuButton = styled(IconButton)`
   height: 2.5em;
   width: 2.5em;
   border-radius: 0.45em;
@@ -91,7 +91,6 @@ export const DesktopNavbarTitle = styled.p<{ expanded: boolean }>`
 export const DesktopNavbarMenuButton = styled(NavbarMenuButton)<{
   expanded: boolean;
 }>`
-  cursor: pointer;
   position: ${(props) => (props.expanded ? 'absolute' : 'relative')};
   right: 0;
   top: 0;

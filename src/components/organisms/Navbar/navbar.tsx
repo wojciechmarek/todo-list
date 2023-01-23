@@ -7,9 +7,9 @@ import {
   DesktopNavbarTitleAndButton,
   MobileNavbar,
   MobileNavbarTitle,
-  MobileNavbarMenuButton,
   MobileNavbarEmptySpace,
   DesktopNavbarMenuButton,
+  MobileNavbarMenuButton,
 } from './navbar.styled';
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -21,9 +21,10 @@ export const Navbar = () => {
   return (
     <>
       <MobileNavbar expanded={isExpanded}>
-        <MobileNavbarMenuButton onClick={toggleExpand}>
-          {isExpanded ? <XMarkIcon /> : <Bars3Icon />}
-        </MobileNavbarMenuButton>
+        <MobileNavbarMenuButton
+          onClick={toggleExpand}
+          icon={isExpanded ? <XMarkIcon /> : <Bars3Icon />}
+        />
         <MobileNavbarTitle>Lorem ipsum</MobileNavbarTitle>
         <MobileNavbarEmptySpace />
       </MobileNavbar>
@@ -32,14 +33,18 @@ export const Navbar = () => {
           <DesktopNavbarTitle expanded={isExpanded}>
             TODO List
           </DesktopNavbarTitle>
-          <DesktopNavbarMenuButton onClick={toggleExpand} expanded={isExpanded}>
-            {isExpanded ? <XMarkIcon /> : <Bars3Icon />}
-          </DesktopNavbarMenuButton>
+          <DesktopNavbarMenuButton
+            expanded={isExpanded}
+            onClick={toggleExpand}
+            icon={isExpanded ? <XMarkIcon /> : <Bars3Icon />}
+          />
         </DesktopNavbarTitleAndButton>
         <NavbarDivider />
         <DesktopNavbarList>
           <DesktopNavbarItem></DesktopNavbarItem>
         </DesktopNavbarList>
+        <NavbarDivider />
+        <DesktopNavbarItem />
       </DesktopNavbar>
     </>
   );
