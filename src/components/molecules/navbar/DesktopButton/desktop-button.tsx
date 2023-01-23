@@ -1,10 +1,18 @@
-import React from 'react';
 import { DesktopNavbarButtonProps } from './desktop-button.interface';
-import { DesktopNavbarButtonContainer } from './desktop-button.styled';
+import {
+  DesktopNavbarButtonContainer,
+  DesktopNavbarButtonIcon,
+  DesktopNavbarButtonText,
+} from './desktop-button.styled';
 
 export const DesktopNavbarButton = (props: DesktopNavbarButtonProps) => {
-  const { icon, name, ...params } = props;
+  const { icon, name, expanded, ...params } = props;
   return (
-    <DesktopNavbarButtonContainer {...params}></DesktopNavbarButtonContainer>
+    <DesktopNavbarButtonContainer {...params}>
+      <DesktopNavbarButtonIcon>{icon}</DesktopNavbarButtonIcon>
+      <DesktopNavbarButtonText expanded={expanded}>
+        {name}
+      </DesktopNavbarButtonText>
+    </DesktopNavbarButtonContainer>
   );
 };

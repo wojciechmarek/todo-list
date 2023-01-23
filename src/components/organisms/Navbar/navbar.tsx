@@ -12,8 +12,13 @@ import {
   MobileNavbarMenuButton,
 } from './navbar.styled';
 
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import {
+  Bars3Icon,
+  XMarkIcon,
+  Cog6ToothIcon,
+} from '@heroicons/react/24/outline';
 import { useNavbar } from './navbar.hook';
+import { DesktopNavbarButton } from '../../molecules';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
@@ -44,7 +49,11 @@ export const Navbar = () => {
           <DesktopNavbarItem></DesktopNavbarItem>
         </DesktopNavbarList>
         <NavbarDivider />
-        <DesktopNavbarItem />
+        <DesktopNavbarButton
+          icon={<Cog6ToothIcon />}
+          name="Settings"
+          expanded={isExpanded}
+        />
       </DesktopNavbar>
     </>
   );
