@@ -20,19 +20,28 @@ import {
 import { useNavbar } from './navbar.hook';
 import { DesktopNavbarButton } from '../../molecules';
 import { useModalProvider } from '../../../providers';
-import { SettingsModal } from '../Modal/content';
+import { SettingsModal } from '../Modal/content/Settings';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
 
   const { openModal, closeModal } = useModalProvider();
 
-  const open = () => {
-    openModal(<SettingsModal handleCloseClick={close} />);
+  const handleOpenModalClick = () => {
+    openModal(
+      <SettingsModal
+        handleCloseClick={handleModalCloseClick}
+        handleTileClick={handleThemeTileClick}
+      />
+    );
   };
 
-  const close = () => {
+  const handleModalCloseClick = () => {
     closeModal();
+  };
+
+  const handleThemeTileClick = (tile: string) => {
+    alert(`You clicked on ${tile} tile`);
   };
 
   return (
@@ -65,7 +74,7 @@ export const Navbar = () => {
           icon={<Cog6ToothIcon />}
           name="Settings"
           expanded={isExpanded}
-          onClick={open}
+          onClick={handleOpenModalClick}
         />
       </DesktopNavbar>
     </>
