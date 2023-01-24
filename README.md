@@ -6,6 +6,10 @@ This project represents modern UI design styles under a to-do list app.
 
 To collect together all design styles in one place.
 
+## Demo
+
+A live demo is available at [https://todo-list-wojciechmarek.vercel.app/](https://todo-list-wojciechmarek.vercel.app/).
+
 ## Design styles
 
 All design styles are written from scratch. This application does not use any UI component library. Currently, the app implements the following design styles:
