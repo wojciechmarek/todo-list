@@ -1,8 +1,14 @@
 import { ImageTileProps } from './image-tile.interface';
 import { ImageTileContainer } from './image-tile.styled';
 
-export const ImageTile = ({ text, handleThemeClick }: ImageTileProps) => {
+export const ImageTile = ({
+  text,
+  isActive,
+  handleThemeClick,
+}: ImageTileProps) => {
   return (
-    <ImageTileContainer onClick={handleThemeClick}>{text}</ImageTileContainer>
+    <ImageTileContainer isActive={isActive} onClick={handleThemeClick}>
+      {text}
+    </ImageTileContainer>
   );
 };

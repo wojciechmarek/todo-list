@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const ImageTileContainer = styled.div`
+export const ImageTileContainer = styled.div<{ isActive: boolean }>`
   margin: 0.75em;
   height: 5em;
   width: 10em;
@@ -17,6 +17,8 @@ export const ImageTileContainer = styled.div`
   box-shadow: var(--modal-box-shadow);
 
   transition: filter 0.3s ease-in-out;
+
+  filter: ${({ isActive }) => (isActive ? 'brightness(0.8)' : 'none')};
 
   &:hover {
     filter: brightness(0.75);

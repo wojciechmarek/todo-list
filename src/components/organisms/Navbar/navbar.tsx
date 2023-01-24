@@ -27,6 +27,7 @@ export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
 
   const { openModal, closeModal } = useModalProvider();
+
   const { changeTheme } = useThemeProvider();
 
   const handleOpenModalClick = () => {
