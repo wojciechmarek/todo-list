@@ -19,9 +19,21 @@ import {
 } from '@heroicons/react/24/outline';
 import { useNavbar } from './navbar.hook';
 import { DesktopNavbarButton } from '../../molecules';
+import { useModalProvider } from '../../../providers';
+import { SettingsModal } from '../Modal/content';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
+
+  const { openModal, closeModal } = useModalProvider();
+
+  const open = () => {
+    openModal(<SettingsModal handleCloseClick={close} />);
+  };
+
+  const close = () => {
+    closeModal();
+  };
 
   return (
     <>
@@ -53,6 +65,7 @@ export const Navbar = () => {
           icon={<Cog6ToothIcon />}
           name="Settings"
           expanded={isExpanded}
+          onClick={open}
         />
       </DesktopNavbar>
     </>
