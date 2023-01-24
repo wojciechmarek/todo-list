@@ -10,7 +10,9 @@ To collect together all design styles in one place.
 
 All design styles are written from scratch. This application does not use any UI component library. Currently, the app implements the following design styles:
 
-- Modern Flat
+- Modern Flat Dark
+- Modern Flat Light
+- Brutalism
 - Neubrutalism
 
 ## Used technologies

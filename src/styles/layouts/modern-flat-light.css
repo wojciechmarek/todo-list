@@ -1,10 +1,12 @@
 [data-theme='modern-flat-light'] {
-  --background-color: #777cad;
-  --primary-color: #bdc6d0;
-  --primary-text-color: #fcfbfc;
-  --primary-button-color: #777cad;
+  --background-color: #f3f2ed;
+  --primary-color: #ecdde6;
+  --primary-text-color: #1c181c;
+  --primary-button-color: #f3f2ed;
 
-  --font-color: #fcfbfc;
+  --divider-color: #f3f2ed;
+  --font-color: #1c181c;
 
   --standard-border-radius: 0.75em;
+  --modal-box-shadow: 0 0 50px 0 #323232;
 }

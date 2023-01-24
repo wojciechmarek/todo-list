@@ -11,8 +11,8 @@ export const ModalTitleBarContainer = styled.div`
 
 export const ModalTitleBarText = styled(Text)`
   font-size: 1.5em;
-  color: white;
-  font-weight: 700;
+  color: var(--font-color);
+  font-weight: 900;
 
   cursor: default;
 `;
@@ -24,6 +24,9 @@ export const ModalTitleBarIcon = styled(IconButton)`
   background-color: var(--primary-color);
   color: var(--font-color);
   transition: filter 0.3s ease-in-out;
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--modal-box-shadow);
 
   &:hover {
     filter: brightness(0.7);

@@ -10,6 +10,9 @@ export const NavbarMenuButton = styled(IconButton)`
   background-color: var(--primary-button-color);
   color: var(--font-color);
   transition: filter 0.3s ease-in-out;
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--modal-box-shadow);
 
   &:hover {
     filter: brightness(0.9);
@@ -28,6 +31,8 @@ export const MobileNavbar = styled.nav<{ expanded: boolean }>`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border: var(--standard-border);
+  box-shadow: var(--modal-box-shadow);
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -41,7 +46,7 @@ export const MobileNavbarEmptySpace = styled.div`
 `;
 
 export const MobileNavbarTitle = styled.p`
-  color: var(--primary-text-color);
+  color: var(--font-color);
   font-size: 1.5em;
   font-weight: 600;
 `;
@@ -62,6 +67,8 @@ export const DesktopNavbar = styled.nav<{ expanded: boolean }>`
   background-color: var(--primary-color);
   border-radius: var(--standard-border-radius);
   transition: width 0.3s ease-in-out;
+  border: var(--standard-border);
+  box-shadow: var(--modal-box-shadow);
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -80,7 +87,7 @@ export const DesktopNavbarTitleAndButton = styled.div`
 
 export const DesktopNavbarTitle = styled.p<{ expanded: boolean }>`
   display: ${(props) => (props.expanded ? 'block' : 'none')};
-  color: var(--primary-text-color);
+  color: var(--font-color);
   text-overflow: clip; // This is needed to make the text wrap
   white-space: pre-line; // This is needed to make the text wrap
   font-size: 1em;
@@ -100,7 +107,7 @@ export const NavbarDivider = styled.div`
   height: 0.05em;
   width: calc(100% - 1.5em);
 
-  background-color: var(--primary-button-color);
+  background-color: var(--divider-color);
 `;
 
 export const DesktopNavbarList = styled.div`

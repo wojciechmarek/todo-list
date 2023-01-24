@@ -12,6 +12,8 @@ export const MainContentContainer = styled.div`
   margin: 0.75em auto;
   border-radius: var(--standard-border-radius);
   background-color: var(--primary-color);
+  border: var(--standard-border);
+  box-shadow: var(--modal-box-shadow);
 
   @media (max-width: 768px) {
     width: calc(100% - 2em);

@@ -5,7 +5,9 @@
   --primary-text-color: #fcfbfc;
   --primary-button-color: #27292e;
 
+  --divider-color: #27292e;
   --font-color: #fcfbfc;
 
   --standard-border-radius: 0.75em;
+  --modal-box-shadow: 0 0 50px 0 #323232;
 }

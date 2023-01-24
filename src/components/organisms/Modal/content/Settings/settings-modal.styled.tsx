@@ -9,8 +9,9 @@ export const SettingsModalStyle = styled.div`
   align-content: flex-start;
 
   background-color: var(--background-color);
-  border-radius: 5px;
-  box-shadow: 0 0 100px 0 #202020;
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--modal-box-shadow);
+  border: var(--standard-border);
 
   @media screen and (min-width: 768px) {
     height: 35em;

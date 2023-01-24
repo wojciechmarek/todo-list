@@ -1,0 +1,13 @@
+[data-theme='neobruthalism'] {
+  --background-color: #e06b6b;
+  --primary-color: #60c0bf;
+  --primary-text-color: #fcfbfc;
+  --primary-button-color: #517eed;
+
+  --divider-color: #1a161a;
+  --font-color: #1a161a;
+
+  --standard-border-radius: 0.75em;
+  --standard-border: 1px solid black;
+  --modal-box-shadow: 0;
+}

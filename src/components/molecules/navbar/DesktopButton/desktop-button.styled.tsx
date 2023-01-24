@@ -12,8 +12,10 @@ export const DesktopNavbarButtonContainer = styled.div`
   width: calc(100% - 1.5rem);
   justify-content: flex-start;
   transition: filter 0.3s ease-in-out;
-
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
   cursor: pointer;
+  box-shadow: var(--modal-box-shadow);
 
   &:hover {
     filter: brightness(0.9);
