@@ -4,12 +4,12 @@ import { SettingsModalStyle } from './settings-modal.styled';
 
 export const SettingsModal = ({
   handleCloseClick,
-  handleTileClick,
+  handleThemeClick,
 }: SettingsModalProps) => {
   return (
     <SettingsModalStyle>
       <ModalTitleBar handleCloseClick={handleCloseClick} title="Settings" />
-      <ModalSettingsContent handleTileClick={handleTileClick} />
+      <ModalSettingsContent handleThemeClick={handleThemeClick} />
     </SettingsModalStyle>
   );
 };

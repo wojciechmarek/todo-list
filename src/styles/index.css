@@ -1,3 +1,4 @@
 @import url('./global.css');
 
-@import url('./layouts/flat-design.css');
+@import url('./layouts/modern-flat-dark.css');
+@import url('./layouts/modern-flat-light.css');

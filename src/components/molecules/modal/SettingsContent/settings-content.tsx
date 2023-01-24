@@ -3,33 +3,33 @@ import { ModalSettingsContentProps } from './settings-content.interface';
 import { SettingsContainer } from './settings-content.styled';
 
 export const ModalSettingsContent = ({
-  handleTileClick,
+  handleThemeClick: handleThemeClick,
 }: ModalSettingsContentProps) => {
   return (
     <SettingsContainer>
       <ImageTile
-        text="Modern flat"
-        handleTileClick={() => handleTileClick('modern-flat')}
+        text="Modern flat dark"
+        handleThemeClick={() => handleThemeClick('modern-flat-dark')}
       />
       <ImageTile
-        text="Hand draw"
-        handleTileClick={() => handleTileClick('hand-draw')}
+        text="Modern flat dark"
+        handleThemeClick={() => handleThemeClick('modern-flat-light')}
       />
       <ImageTile
         text="Glassmorphism"
-        handleTileClick={() => handleTileClick('glassmorphism')}
+        handleThemeClick={() => handleThemeClick('glassmorphism')}
       />
       <ImageTile
         text="Bruthalism"
-        handleTileClick={() => handleTileClick('bruthalism')}
+        handleThemeClick={() => handleThemeClick('bruthalism')}
       />
       <ImageTile
         text="Claymorphism"
-        handleTileClick={() => handleTileClick('claymorphism')}
+        handleThemeClick={() => handleThemeClick('claymorphism')}
       />
       <ImageTile
         text="Cyber punk"
-        handleTileClick={() => handleTileClick('cyber-punk')}
+        handleThemeClick={() => handleThemeClick('cyber-punk')}
       />
     </SettingsContainer>
   );

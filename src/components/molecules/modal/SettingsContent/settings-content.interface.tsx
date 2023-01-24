@@ -1,11 +1,5 @@
-export interface ModalSettingsContentProps {
-  handleTileClick: (tile: TileType) => void;
-}
+import { ThemeType } from '../../../../providers/Theme/theme.interface';
 
-export type TileType =
-  | 'modern-flat'
-  | 'hand-draw'
-  | 'glassmorphism'
-  | 'bruthalism'
-  | 'claymorphism'
-  | 'cyber-punk';
+export interface ModalSettingsContentProps {
+  handleThemeClick: (tile: ThemeType) => void;
+}

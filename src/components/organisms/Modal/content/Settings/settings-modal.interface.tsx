@@ -1,4 +1,6 @@
+import { ThemeType } from '../../../../../providers/Theme/theme.interface';
+
 export interface SettingsModalProps {
   handleCloseClick: () => void;
-  handleTileClick: (tile: string) => void;
+  handleThemeClick: (theme: ThemeType) => void;
 }

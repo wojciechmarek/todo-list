@@ -19,19 +19,21 @@ import {
 } from '@heroicons/react/24/outline';
 import { useNavbar } from './navbar.hook';
 import { DesktopNavbarButton } from '../../molecules';
-import { useModalProvider } from '../../../providers';
+import { useModalProvider, useThemeProvider } from '../../../providers';
 import { SettingsModal } from '../Modal/content/Settings';
+import { ThemeType } from '../../../providers/Theme/theme.interface';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
 
   const { openModal, closeModal } = useModalProvider();
+  const { changeTheme } = useThemeProvider();
 
   const handleOpenModalClick = () => {
     openModal(
       <SettingsModal
         handleCloseClick={handleModalCloseClick}
-        handleTileClick={handleThemeTileClick}
+        handleThemeClick={handleThemeTileClick}
       />
     );
   };
@@ -40,8 +42,8 @@ export const Navbar = () => {
     closeModal();
   };
 
-  const handleThemeTileClick = (tile: string) => {
-    alert(`You clicked on ${tile} tile`);
+  const handleThemeTileClick = (theme: ThemeType) => {
+    changeTheme(theme);
   };
 
   return (
