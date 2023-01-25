@@ -5,34 +5,35 @@ import { ModalSettingsContentProps } from './settings-content.interface';
 import { SettingsContainer } from './settings-content.styled';
 
 export const ModalSettingsContent = ({
+  theme,
   handleThemeClick,
 }: ModalSettingsContentProps) => {
-  const [theme, setTheme] = useState('modern-flat-dark');
+  const [currentTheme, setCurrentTheme] = useState(theme);
 
   const handleClick = (theme: ThemeType) => {
     handleThemeClick(theme);
-    setTheme(theme);
+    setCurrentTheme(theme);
   };
 
   return (
     <SettingsContainer>
       <ImageTile
-        isActive={theme === 'modern-flat-dark'}
+        isActive={currentTheme === 'modern-flat-dark'}
         text="Modern flat dark"
         handleThemeClick={() => handleClick('modern-flat-dark')}
       />
       <ImageTile
-        isActive={theme === 'modern-flat-light'}
+        isActive={currentTheme === 'modern-flat-light'}
         text="Modern flat light"
         handleThemeClick={() => handleClick('modern-flat-light')}
       />
       <ImageTile
-        isActive={theme === 'bruthalism'}
+        isActive={currentTheme === 'bruthalism'}
         text="Bruthalism"
         handleThemeClick={() => handleClick('bruthalism')}
       />
       <ImageTile
-        isActive={theme === 'neobruthalism'}
+        isActive={currentTheme === 'neobruthalism'}
         text="Neobruthalism"
         handleThemeClick={() => handleClick('neobruthalism')}
       />

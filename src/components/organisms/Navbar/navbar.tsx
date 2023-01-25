@@ -28,11 +28,12 @@ export const Navbar = () => {
 
   const { openModal, closeModal } = useModalProvider();
 
-  const { changeTheme } = useThemeProvider();
+  const { changeTheme, theme } = useThemeProvider();
 
   const handleOpenModalClick = () => {
     openModal(
       <SettingsModal
+        theme={theme}
         handleCloseClick={handleModalCloseClick}
         handleThemeClick={handleThemeTileClick}
       />
