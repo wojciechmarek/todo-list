@@ -14,9 +14,10 @@
 
   /* --------- */
 
-  --modal-box-shadow: 0;
+  --modal-box-shadow: 0 0 20px #1a161a;
   --container-box-shadow: 0;
 
   --standard-border-radius: 0;
   --standard-border: 1px solid #1a161a;
+  --backdrop-filter: 0;
 }

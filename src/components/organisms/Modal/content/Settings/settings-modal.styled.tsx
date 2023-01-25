@@ -12,6 +12,7 @@ export const SettingsModalStyle = styled.div`
   border-radius: var(--standard-border-radius);
   box-shadow: var(--modal-box-shadow);
   border: var(--standard-border);
+  backdrop-filter: var(--backdrop-filter);
 
   @media screen and (min-width: 768px) {
     height: 35em;

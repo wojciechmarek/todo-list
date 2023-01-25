@@ -15,10 +15,10 @@
 
   /* --------- */
 
-  --modal-box-shadow: 0;
   --container-box-shadow: 3px 3px 0 #000000;
-
   --standard-border-radius: 0;
+
   --standard-border: 1px solid black;
   --modal-box-shadow: 5px 5px 0 #000000;
+  --backdrop-filter: 0;
 }

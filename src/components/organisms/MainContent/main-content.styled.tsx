@@ -14,6 +14,7 @@ export const MainContentContainer = styled.div`
   background-color: var(--nav-and-content-bg-color);
   border: var(--standard-border);
   box-shadow: var(--container-box-shadow);
+  backdrop-filter: var(--backdrop-filter);
 
   @media (max-width: 768px) {
     width: calc(100% - 2em);

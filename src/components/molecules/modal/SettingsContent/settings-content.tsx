@@ -42,6 +42,11 @@ export const ModalSettingsContent = ({
         text="Cardboard"
         handleThemeClick={() => handleClick('cardboard')}
       />
+      <ImageTile
+        isActive={currentTheme === 'glassmorphism'}
+        text="Glassmorphism"
+        handleThemeClick={() => handleClick('glassmorphism')}
+      />
     </SettingsContainer>
   );
 };

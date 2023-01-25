@@ -21,4 +21,5 @@
 
   --standard-border-radius: 0.75em;
   --standard-border: 0;
+  --backdrop-filter: 0;
 }

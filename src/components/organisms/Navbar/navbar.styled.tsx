@@ -33,6 +33,7 @@ export const MobileNavbar = styled.nav<{ expanded: boolean }>`
   justify-content: space-between;
   border: var(--standard-border);
   box-shadow: var(--container-box-shadow);
+  backdrop-filter: var(--backdrop-filter);
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -69,6 +70,7 @@ export const DesktopNavbar = styled.nav<{ expanded: boolean }>`
   transition: width 0.3s ease-in-out;
   border: var(--standard-border);
   box-shadow: var(--container-box-shadow);
+  backdrop-filter: var(--backdrop-filter);
 
   @media screen and (min-width: 768px) {
     display: flex;

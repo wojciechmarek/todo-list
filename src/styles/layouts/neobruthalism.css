@@ -19,4 +19,5 @@
 
   --standard-border-radius: 0.75em;
   --standard-border: 1px solid black;
+  --backdrop-filter: 0;
 }
