@@ -8,5 +8,8 @@
   --font-color: #1c181c;
 
   --standard-border-radius: 0.75em;
-  --modal-box-shadow: 0 0 50px 0 #323232;
+  --modal-box-shadow: 0 0 50px 0 #bbaaaa;
+  --container-box-shadow: 0;
+
+  --background: #f3f2ed;
 }

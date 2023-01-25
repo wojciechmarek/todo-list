@@ -10,4 +10,6 @@
   --standard-border-radius: 0.75em;
   --standard-border: 1px solid black;
   --modal-box-shadow: 0;
+
+  --background: url('/src/assets/backgrounds/neobruthalism.svg');
 }

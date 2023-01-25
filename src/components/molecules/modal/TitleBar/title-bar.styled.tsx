@@ -26,7 +26,7 @@ export const ModalTitleBarIcon = styled(IconButton)`
   transition: filter 0.3s ease-in-out;
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);
-  box-shadow: var(--modal-box-shadow);
+  box-shadow: var(--container-box-shadow);
 
   &:hover {
     filter: brightness(0.7);

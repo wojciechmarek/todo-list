@@ -9,5 +9,7 @@
   --font-color: #fcfbfc;
 
   --standard-border-radius: 0.75em;
-  --modal-box-shadow: 0 0 50px 0 #323232;
+  --modal-box-shadow: 0 0 50px 0 #252323;
+
+  --background: #27292e;
 }
