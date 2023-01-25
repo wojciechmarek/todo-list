@@ -8,7 +8,7 @@ export const SettingsModalStyle = styled.div`
   flex-direction: column;
   align-content: flex-start;
 
-  background-color: var(--background-color);
+  background-color: var(--modal-bg-color);
   border-radius: var(--standard-border-radius);
   box-shadow: var(--modal-box-shadow);
   border: var(--standard-border);

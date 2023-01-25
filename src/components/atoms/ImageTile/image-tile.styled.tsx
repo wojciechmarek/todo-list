@@ -7,9 +7,9 @@ export const ImageTileContainer = styled.div<{ isActive: boolean }>`
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-color);
+  background-color: var(--theme-tile-button-bg-color);
   border-radius: 0.5em;
-  color: var(--font-color);
+  color: var(--text-font-color);
   font-weight: 800;
   cursor: pointer;
   border: var(--standard-border);

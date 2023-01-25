@@ -1,0 +1,22 @@
+[data-theme='cardboard'] {
+  --background: #ccc7be;
+  --nav-and-content-bg-color: #ccc7be;
+  --modal-bg-color: #ccc7be;
+  --modal-cross-button-bg-color: #1a161a;
+  --navbar-menu-button-bg-color: #1a161a;
+  --navbar-settings-button-bg-color: #1a161a;
+  --theme-tile-button-bg-color: #ccc7be;
+
+  --button-font-color: #ccc7be;
+  --text-font-color: #1a161a;
+
+  --divider-color: #1a161a;
+
+  /* --------- */
+
+  --modal-box-shadow: 0;
+  --container-box-shadow: 0;
+
+  --standard-border-radius: 0;
+  --standard-border: 1px solid #1a161a;
+}

@@ -7,7 +7,7 @@ export const DesktopNavbarButtonContainer = styled.div`
   justify-content: center;
 
   margin: 0.75rem;
-  background-color: var(--primary-button-color);
+  background-color: var(--navbar-settings-button-bg-color);
   border-radius: 0.5rem;
   width: calc(100% - 1.5rem);
   justify-content: flex-start;
@@ -23,13 +23,13 @@ export const DesktopNavbarButtonContainer = styled.div`
 `;
 
 export const DesktopNavbarButtonIcon = styled(Icon)`
-  color: var(--font-color);
+  color: var(--button-font-color);
   height: 2.5em;
   width: 2.5em;
 `;
 
 export const DesktopNavbarButtonText = styled(Text)<{ expanded: boolean }>`
   font-weight: 600;
-  color: var(--font-color);
+  color: var(--button-font-color);
   display: ${(props) => (props.expanded ? 'block' : 'none')};
 `;

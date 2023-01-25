@@ -1,15 +1,22 @@
 [data-theme='modern-flat-dark'] {
-  --background-color: #27292e;
+  --background: #27292e;
+  --nav-and-content-bg-color: #1a1c1e;
+  --modal-bg-color: #27292e;
+  --modal-cross-button-bg-color: #1a1c1e;
+  --navbar-menu-button-bg-color: #27292e;
+  --navbar-settings-button-bg-color: #27292e;
+  --theme-tile-button-bg-color: #1a1c1e;
 
-  --primary-color: #1a1c1e;
-  --primary-text-color: #fcfbfc;
-  --primary-button-color: #27292e;
+  --button-font-color: #fcfbfc;
+  --text-font-color: #fcfbfc;
 
   --divider-color: #27292e;
-  --font-color: #fcfbfc;
+
+  /* --------- */
+
+  --modal-box-shadow: 0 0 50px 0 #252323;
+  --container-box-shadow: 0;
 
   --standard-border-radius: 0.75em;
-  --modal-box-shadow: 0 0 50px 0 #252323;
-
-  --background: #27292e;
+  --standard-border: 0;
 }

@@ -37,6 +37,11 @@ export const ModalSettingsContent = ({
         text="Neobruthalism"
         handleThemeClick={() => handleClick('neobruthalism')}
       />
+      <ImageTile
+        isActive={currentTheme === 'cardboard'}
+        text="Cardboard"
+        handleThemeClick={() => handleClick('cardboard')}
+      />
     </SettingsContainer>
   );
 };

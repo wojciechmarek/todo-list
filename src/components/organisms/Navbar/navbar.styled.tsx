@@ -7,8 +7,8 @@ export const NavbarMenuButton = styled(IconButton)`
   height: 2.5em;
   width: 2.5em;
   border-radius: 0.45em;
-  background-color: var(--primary-button-color);
-  color: var(--font-color);
+  background-color: var(--navbar-menu-button-bg-color);
+  color: var(--button-font-color);
   transition: filter 0.3s ease-in-out;
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);
@@ -26,7 +26,7 @@ export const MobileNavbar = styled.nav<{ expanded: boolean }>`
   height: 4.5em;
   width: calc(100% - 2em);
   margin: 0.75em 0.75em 0 0.75em;
-  background-color: var(--primary-color);
+  background-color: var(--nav-and-content-bg-color);
   border-radius: var(--standard-border-radius);
   flex-direction: row;
   align-items: center;
@@ -46,7 +46,7 @@ export const MobileNavbarEmptySpace = styled.div`
 `;
 
 export const MobileNavbarTitle = styled.p`
-  color: var(--font-color);
+  color: var(--text-font-color);
   font-size: 1.5em;
   font-weight: 600;
 `;
@@ -64,7 +64,7 @@ export const DesktopNavbar = styled.nav<{ expanded: boolean }>`
   height: calc(100% - 2em);
   width: ${(props) => (props.expanded ? '15em' : '4.25em')};
   margin: 0.75em;
-  background-color: var(--primary-color);
+  background-color: var(--nav-and-content-bg-color);
   border-radius: var(--standard-border-radius);
   transition: width 0.3s ease-in-out;
   border: var(--standard-border);
@@ -87,7 +87,7 @@ export const DesktopNavbarTitleAndButton = styled.div`
 
 export const DesktopNavbarTitle = styled.p<{ expanded: boolean }>`
   display: ${(props) => (props.expanded ? 'block' : 'none')};
-  color: var(--font-color);
+  color: var(--text-font-color);
   text-overflow: clip; // This is needed to make the text wrap
   white-space: pre-line; // This is needed to make the text wrap
   font-size: 1em;
@@ -104,7 +104,7 @@ export const DesktopNavbarMenuButton = styled(NavbarMenuButton)<{
 `;
 
 export const NavbarDivider = styled.div`
-  height: 0.05em;
+  height: 0.1em;
   width: calc(100% - 1.5em);
 
   background-color: var(--divider-color);

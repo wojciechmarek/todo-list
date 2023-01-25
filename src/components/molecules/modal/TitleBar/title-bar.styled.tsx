@@ -11,7 +11,7 @@ export const ModalTitleBarContainer = styled.div`
 
 export const ModalTitleBarText = styled(Text)`
   font-size: 1.5em;
-  color: var(--font-color);
+  color: var(--text-font-color);
   font-weight: 900;
 
   cursor: default;
@@ -21,8 +21,8 @@ export const ModalTitleBarIcon = styled(IconButton)`
   height: 2.5em;
   width: 2.5em;
   border-radius: 0.45em;
-  background-color: var(--primary-color);
-  color: var(--font-color);
+  background-color: var(--modal-cross-button-bg-color);
+  color: var(--button-font-color);
   transition: filter 0.3s ease-in-out;
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);

@@ -1,15 +1,22 @@
 [data-theme='neobruthalism'] {
-  --background-color: #e06b6b;
-  --primary-color: #60c0bf;
-  --primary-text-color: #fcfbfc;
-  --primary-button-color: #517eed;
+  --background: url('/src/assets/backgrounds/neobruthalism.svg');
+  --nav-and-content-bg-color: #60c0bf;
+  --modal-bg-color: #e06b6b;
+  --modal-cross-button-bg-color: #60c0bf;
+  --navbar-menu-button-bg-color: #517eed;
+  --navbar-settings-button-bg-color: #517eed;
+  --theme-tile-button-bg-color: #a4e08c;
+
+  --button-font-color: #1a161a;
+  --text-font-color: #1a161a;
 
   --divider-color: #1a161a;
-  --font-color: #1a161a;
+
+  /* --------- */
+
+  --modal-box-shadow: 0;
+  --container-box-shadow: 0;
 
   --standard-border-radius: 0.75em;
   --standard-border: 1px solid black;
-  --modal-box-shadow: 0;
-
-  --background: url('/src/assets/backgrounds/neobruthalism.svg');
 }

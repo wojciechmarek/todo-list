@@ -11,7 +11,7 @@ export const MainContentContainer = styled.div`
   max-width: 860px;
   margin: 0.75em auto;
   border-radius: var(--standard-border-radius);
-  background-color: var(--primary-color);
+  background-color: var(--nav-and-content-bg-color);
   border: var(--standard-border);
   box-shadow: var(--container-box-shadow);
 

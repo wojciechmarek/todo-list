@@ -9,4 +9,5 @@ export type ThemeType =
   | 'glassmorphism'
   | 'bruthalism'
   | 'claymorphism'
+  | 'cardboard'
   | 'neobruthalism';
