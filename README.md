@@ -8,7 +8,7 @@ To collect together all design styles in one place.
 
 ## Demo
 
-A live demo is available at [https://todo-list-wojciechmarek.vercel.app/](https://todo-list-wojciechmarek.vercel.app/).
+A live demo is available at [https://todo-list-rust-theta.vercel.app](https://todo-list-rust-theta.vercel.app).
 
 ## Design styles
 
