@@ -18,6 +18,8 @@ All design styles are written from scratch. This application does not use any UI
 - Modern Flat Light
 - Brutalism
 - Neubrutalism
+- Glassmorphism
+- Cardboard
 
 ## Used technologies
 
