@@ -19,26 +19,21 @@ import {
 } from '@heroicons/react/24/outline';
 import { useNavbar } from './navbar.hook';
 import { DesktopNavbarButton } from '../../molecules';
-import { useModalProvider, useThemeProvider } from '../../../providers';
+import {
+  useModalProvider,
+  useThemeProvider,
+  useStorageProvider,
+} from '../../../providers';
 import { SettingsModal } from '../Modal/content/Settings';
 import { ThemeType } from '../../../providers/Theme/theme.interface';
+import { useEffect } from 'react';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
 
+  const { theme, saveTheme } = useStorageProvider();
   const { openModal, closeModal } = useModalProvider();
-
-  const { changeTheme, theme } = useThemeProvider();
-
-  const handleOpenModalClick = () => {
-    openModal(
-      <SettingsModal
-        theme={theme}
-        handleCloseClick={handleModalCloseClick}
-        handleThemeClick={handleThemeTileClick}
-      />
-    );
-  };
+  const { changeTheme } = useThemeProvider();
 
   const handleModalCloseClick = () => {
     closeModal();
@@ -46,6 +41,21 @@ export const Navbar = () => {
 
   const handleThemeTileClick = (theme: ThemeType) => {
     changeTheme(theme);
+    saveTheme(theme);
+  };
+
+  useEffect(() => {
+    changeTheme(theme);
+  }, [theme]);
+
+  const handleOpenSettingsModalClick = () => {
+    openModal(
+      <SettingsModal
+        theme={theme}
+        handleCloseClick={handleModalCloseClick}
+        handleThemeClick={handleThemeTileClick}
+      />
+    );
   };
 
   return (
@@ -78,7 +88,7 @@ export const Navbar = () => {
           icon={<Cog6ToothIcon />}
           name="Settings"
           expanded={isExpanded}
-          onClick={handleOpenModalClick}
+          onClick={handleOpenSettingsModalClick}
         />
       </DesktopNavbar>
     </>
