@@ -20,7 +20,9 @@ export const StorageProvider = ({ children }: ProviderProps) => {
     (store) => {
       return {
         ...store,
-        theme: getLocalStorageItem(LocalStorageItem.Theme) ?? '',
+        theme:
+          getLocalStorageItem(LocalStorageItem.Theme) ??
+          LocalStorageInitialState.theme,
       } as LocalStorageState;
     }
   );
