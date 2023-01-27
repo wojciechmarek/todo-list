@@ -1,16 +1,20 @@
 [data-theme='glassmorphism'] {
   --background: url('/src/assets/backgrounds/glassmorphism.jpg');
-  --nav-and-content-bg-color: #ffffff30;
-  --modal-bg-color: #ffffff30;
+  --nav-and-content-bg-color: #ffffff40;
+  --modal-bg-color: #ffffff40;
   --modal-cross-button-bg-color: #60c0bf;
   --navbar-menu-button-bg-color: #ffffff30;
   --navbar-settings-button-bg-color: #ffffff30;
   --theme-tile-button-bg-color: #ffffff30;
+  --search-input-bg-color: #ffffff40;
+  --search-input-border-and-icon-bg-color: #ffffff40;
+  --add-new-task-button-bg-color: #ffffff40;
 
   --button-font-color: #1a161a;
   --text-font-color: #1a161a;
+  --search-magnifier-color: #f6e6f6;
 
-  --divider-color: #1a161a;
+  --divider-color: #ffffff30;
 
   /* --------- */
 

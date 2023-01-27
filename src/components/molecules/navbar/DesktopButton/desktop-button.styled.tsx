@@ -8,13 +8,11 @@ export const DesktopNavbarButtonContainer = styled.div`
 
   margin: 0.75rem;
   background-color: var(--navbar-settings-button-bg-color);
-  border-radius: 0.5rem;
   width: calc(100% - 1.5rem);
   justify-content: flex-start;
   transition: filter 0.3s ease-in-out;
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);
-  cursor: pointer;
   box-shadow: var(--container-box-shadow);
 
   &:hover {

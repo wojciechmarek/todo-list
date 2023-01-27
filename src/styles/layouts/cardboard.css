@@ -6,9 +6,13 @@
   --navbar-menu-button-bg-color: #1a161a;
   --navbar-settings-button-bg-color: #1a161a;
   --theme-tile-button-bg-color: #ccc7be;
+  --search-input-bg-color: #ccc7be;
+  --search-input-border-and-icon-bg-color: #1a161a;
+  --add-new-task-button-bg-color: #ccc7be;
 
   --button-font-color: #ccc7be;
   --text-font-color: #1a161a;
+  --search-magnifier-color: #ccc7be;
 
   --divider-color: #1a161a;
 

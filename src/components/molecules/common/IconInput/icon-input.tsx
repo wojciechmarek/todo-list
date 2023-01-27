@@ -1,12 +1,16 @@
 import { IconInputProps } from './icon-input.interface';
-import { IconInputContainer, IconStyle } from './icon-input.styled';
+import { IconInputContainer, IconStyle, InputStyle } from './icon-input.styled';
 
 export const IconInput = (props: IconInputProps) => {
-  const { icon, ...params } = props;
+  const { icon, placeholder, handleInputChange, ...params } = props;
 
   return (
     <IconInputContainer {...params}>
-      <IconStyle icon={icon}></IconStyle>
+      <InputStyle
+        handleInputChange={handleInputChange}
+        placeholder={placeholder}
+      />
+      <IconStyle icon={icon} />
     </IconInputContainer>
   );
 };

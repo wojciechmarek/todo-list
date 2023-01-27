@@ -1,3 +1,5 @@
 import styled from '@emotion/styled';
 
-export const ButtonStyle = styled.button``;
+export const ButtonStyle = styled.button`
+  cursor: pointer;
+`;

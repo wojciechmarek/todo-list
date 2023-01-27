@@ -7,7 +7,6 @@ export const IconButtonContainer = styled(Button)`
   justify-content: center;
 
   border: none;
-  cursor: pointer;
 `;
 
 export const IconStyle = styled(Icon)`

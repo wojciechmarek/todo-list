@@ -11,7 +11,6 @@ export const ImageTileContainer = styled.div<{ isActive: boolean }>`
   border-radius: 0.5em;
   color: var(--text-font-color);
   font-weight: 800;
-  cursor: pointer;
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);
   box-shadow: var(--container-box-shadow);

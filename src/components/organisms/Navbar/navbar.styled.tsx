@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Text } from '../../atoms';
+import { Divider, Text } from '../../atoms';
 import { IconButton } from '../../molecules';
 
 // Common
@@ -106,10 +106,8 @@ export const DesktopNavbarMenuButton = styled(NavbarMenuButton)<{
   top: 0;
 `;
 
-export const NavbarDivider = styled.div`
-  height: 0.1em;
+export const NavbarDivider = styled(Divider)`
   width: calc(100% - 1.5em);
-
   background-color: var(--divider-color);
 `;
 
