@@ -14,6 +14,7 @@ export const ImageTileContainer = styled.div<{ isActive: boolean }>`
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);
   box-shadow: var(--container-box-shadow);
+  cursor: pointer;
 
   transition: filter 0.3s ease-in-out;
 
