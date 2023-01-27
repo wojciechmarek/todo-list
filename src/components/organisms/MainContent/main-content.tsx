@@ -3,11 +3,14 @@ import {
   MainContentContainer,
   MainContentWrapper,
 } from './main-content.styled';
+import { ItemsTodo } from './views';
 
 export const MainContent = () => {
   return (
     <MainContentWrapper>
-      <MainContentContainer></MainContentContainer>
+      <MainContentContainer>
+        <ItemsTodo />
+      </MainContentContainer>
     </MainContentWrapper>
   );
 };

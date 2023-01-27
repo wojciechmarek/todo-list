@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { ThemeType } from '../../../../providers/Theme/theme.interface';
-import { ImageTile } from '../../../atoms';
+import { ThemeType } from '../../../../providers';
+import { ImageTile } from '../../common';
 import { ModalSettingsContentProps } from './settings-content.interface';
 import { SettingsContainer } from './settings-content.styled';
 

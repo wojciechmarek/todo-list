@@ -24,7 +24,7 @@ import {
   useThemeProvider,
   useStorageProvider,
 } from '../../../providers';
-import { SettingsModal } from '../Modal/content/Settings';
+import { SettingsModal } from '../Modal/views/Settings';
 import { ThemeType } from '../../../providers/Theme/theme.interface';
 import { useEffect } from 'react';
 

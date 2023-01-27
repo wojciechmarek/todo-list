@@ -1,4 +1,4 @@
-import { ThemeType } from '../../../../providers/Theme/theme.interface';
+import { ThemeType } from '../../../../providers';
 
 export interface ModalSettingsContentProps {
   theme: ThemeType;

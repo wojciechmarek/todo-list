@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { Button, Icon } from '../../../atoms';
+import { Icon } from '../../../atoms';
 
-export const IconButtonContainer = styled(Button)`
+export const IconInputContainer = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
