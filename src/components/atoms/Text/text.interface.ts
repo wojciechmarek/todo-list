@@ -1,4 +1,4 @@
 export interface TextProps {
-  children: string;
+  text: string;
   [key: string]: unknown;
 }

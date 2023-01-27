@@ -2,7 +2,7 @@ import { TextProps } from './text.interface';
 import { TextStyle } from './text.styled';
 
 export const Text = (props: TextProps) => {
-  const { children, ...params } = props;
+  const { text, ...params } = props;
 
-  return <TextStyle {...params}>{children}</TextStyle>;
+  return <TextStyle {...params}>{text}</TextStyle>;
 };

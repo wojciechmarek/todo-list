@@ -6,7 +6,7 @@ export const IconButton = (props: IconButtonProps) => {
 
   return (
     <IconButtonContainer {...params}>
-      <IconStyle>{icon}</IconStyle>
+      <IconStyle icon={icon}></IconStyle>
     </IconButtonContainer>
   );
 };

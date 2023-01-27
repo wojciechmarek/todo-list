@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Text } from '../../atoms';
 import { IconButton } from '../../molecules';
 
 // Common
@@ -46,7 +47,7 @@ export const MobileNavbarEmptySpace = styled.div`
   width: 3em;
 `;
 
-export const MobileNavbarTitle = styled.p`
+export const MobileNavbarTitle = styled(Text)`
   color: var(--text-font-color);
   font-size: 1.5em;
   font-weight: 600;
@@ -87,7 +88,7 @@ export const DesktopNavbarTitleAndButton = styled.div`
   width: calc(100% - 1.5em);
 `;
 
-export const DesktopNavbarTitle = styled.p<{ expanded: boolean }>`
+export const DesktopNavbarTitle = styled(Text)<{ expanded: boolean }>`
   display: ${(props) => (props.expanded ? 'block' : 'none')};
   color: var(--text-font-color);
   text-overflow: clip; // This is needed to make the text wrap

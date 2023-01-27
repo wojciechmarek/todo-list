@@ -65,14 +65,12 @@ export const Navbar = () => {
           onClick={toggleExpand}
           icon={isExpanded ? <XMarkIcon /> : <Bars3Icon />}
         />
-        <MobileNavbarTitle>Lorem ipsum</MobileNavbarTitle>
+        <MobileNavbarTitle text="Lorem ipsum"></MobileNavbarTitle>
         <MobileNavbarEmptySpace />
       </MobileNavbar>
       <DesktopNavbar expanded={isExpanded}>
         <DesktopNavbarTitleAndButton>
-          <DesktopNavbarTitle expanded={isExpanded}>
-            TODO List
-          </DesktopNavbarTitle>
+          <DesktopNavbarTitle expanded={isExpanded} text="TODO List" />
           <DesktopNavbarMenuButton
             expanded={isExpanded}
             onClick={toggleExpand}
@@ -81,7 +79,7 @@ export const Navbar = () => {
         </DesktopNavbarTitleAndButton>
         <NavbarDivider />
         <DesktopNavbarList>
-          <DesktopNavbarItem></DesktopNavbarItem>
+          <DesktopNavbarItem />
         </DesktopNavbarList>
         <NavbarDivider />
         <DesktopNavbarButton

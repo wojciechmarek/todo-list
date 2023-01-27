@@ -2,11 +2,11 @@ import { IconProps } from './icon.interface';
 import { IconContainer, IconStyle } from './icon.styled';
 
 export const Icon = (props: IconProps) => {
-  const { children, ...params } = props;
+  const { icon, ...params } = props;
 
   return (
     <IconContainer {...params}>
-      <IconStyle>{children}</IconStyle>
+      <IconStyle>{icon}</IconStyle>
     </IconContainer>
   );
 };

@@ -12,7 +12,7 @@ export const ModalTitleBar = ({
 }: ModalTitleBarProps) => {
   return (
     <ModalTitleBarContainer>
-      <ModalTitleBarText>{title}</ModalTitleBarText>
+      <ModalTitleBarText text={title}></ModalTitleBarText>
       <ModalTitleBarIcon icon={<XMarkIcon />} onClick={handleCloseClick} />
     </ModalTitleBarContainer>
   );

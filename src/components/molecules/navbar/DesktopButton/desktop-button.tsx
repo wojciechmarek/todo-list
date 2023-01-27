@@ -9,10 +9,8 @@ export const DesktopNavbarButton = (props: DesktopNavbarButtonProps) => {
   const { icon, name, expanded, ...params } = props;
   return (
     <DesktopNavbarButtonContainer {...params}>
-      <DesktopNavbarButtonIcon>{icon}</DesktopNavbarButtonIcon>
-      <DesktopNavbarButtonText expanded={expanded}>
-        {name}
-      </DesktopNavbarButtonText>
+      <DesktopNavbarButtonIcon icon={icon} />
+      <DesktopNavbarButtonText expanded={expanded} text={name} />
     </DesktopNavbarButtonContainer>
   );
 };
