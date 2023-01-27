@@ -1,5 +1,3 @@
-import { Button } from '../../../../atoms';
-import { IconInput } from '../../../../molecules';
 import {
   ItemsTodoAddButton,
   ItemsTodoContainer,
@@ -11,7 +9,13 @@ import {
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
-export const ItemsTodo = () => {
+export interface ItemsTodoProps {
+  handleAddTaskModalClick: () => void;
+}
+
+export const ItemsTodo = (props: ItemsTodoProps) => {
+  const { handleAddTaskModalClick } = props;
+
   return (
     <ItemsTodoContainer>
       <ItemsTodoTitle title="Things to do:" />
@@ -21,7 +25,9 @@ export const ItemsTodo = () => {
           placeholder="Search"
           handleInputChange={console.log}
         />
-        <ItemsTodoAddButton>New task</ItemsTodoAddButton>
+        <ItemsTodoAddButton onClick={handleAddTaskModalClick}>
+          New task
+        </ItemsTodoAddButton>
       </ItemsTodoSearchAndAdd>
       <ItemsTodoDivider />
     </ItemsTodoContainer>

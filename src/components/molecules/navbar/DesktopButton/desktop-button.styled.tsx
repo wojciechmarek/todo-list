@@ -15,6 +15,8 @@ export const DesktopNavbarButtonContainer = styled.div`
   border-radius: var(--standard-border-radius);
   box-shadow: var(--container-box-shadow);
 
+  cursor: pointer;
+
   &:hover {
     filter: brightness(0.9);
   }
