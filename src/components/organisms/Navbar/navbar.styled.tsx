@@ -26,7 +26,7 @@ export const MobileNavbar = styled.nav<{ expanded: boolean }>`
   display: flex;
   height: 4.5em;
   width: calc(100% - 2em);
-  margin: 0.75em 0.75em 0 0.75em;
+  margin: 0.75em 1em 0 1em;
   background-color: var(--nav-and-content-bg-color);
   border-radius: var(--standard-border-radius);
   flex-direction: row;
