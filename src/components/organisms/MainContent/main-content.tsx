@@ -1,6 +1,5 @@
-import React from 'react';
-import { useModalProvider } from '../../../providers';
-import { Task } from '../../molecules';
+import { Task } from '../../../common';
+import { useModalProvider, useStorageProvider } from '../../../providers';
 import { AddTaskModal } from '../Modal/views/AddTask';
 import {
   MainContentContainer,
@@ -10,6 +9,7 @@ import { ItemsTodo } from './views';
 
 export const MainContent = () => {
   const { openModal, closeModal } = useModalProvider();
+  const { saveTask } = useStorageProvider();
 
   const handleAddTaskModalClick = () => {
     openModal(
@@ -25,7 +25,7 @@ export const MainContent = () => {
   };
 
   const handleSaveButtonClick = (data: Task) => {
-    console.log(data);
+    saveTask(data);
     closeModal();
   };
 

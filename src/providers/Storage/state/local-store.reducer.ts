@@ -1,5 +1,8 @@
 import { LocalStorageAction } from './local-store.action';
-import { LocalStorageState } from './local-store.store';
+import {
+  LocalStorageInitialState,
+  LocalStorageState,
+} from './local-store.store';
 
 export const LocalStorageReducer = (
   state: LocalStorageState,
@@ -8,11 +11,10 @@ export const LocalStorageReducer = (
   switch (action.type) {
     case 'updateTheme':
       return { ...state, theme: action.value };
+    case 'updateTasks':
+      return { ...state, tasks: action.value };
     case 'clearAllData':
-      return {
-        ...state,
-        theme: 'modern-flat-dark',
-      } as LocalStorageState;
+      return LocalStorageInitialState;
     default:
       return state;
   }

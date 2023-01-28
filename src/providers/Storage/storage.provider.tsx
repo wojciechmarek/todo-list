@@ -1,4 +1,5 @@
 import { useReducer } from 'react';
+import { Task } from '../../common';
 import { ProviderProps } from '../Common';
 import { ThemeType } from '../Theme/theme.interface';
 import {
@@ -32,8 +33,41 @@ export const StorageProvider = ({ children }: ProviderProps) => {
     setLocalStorageItem(LocalStorageItem.Theme, theme);
   };
 
+  const saveTask = (task: Task) => {
+    task.id = new Date().getTime();
+    const tasks = [...state.tasks, task];
+    dispatch({ type: 'updateTasks', value: tasks });
+    setLocalStorageItem(LocalStorageItem.Tasks, tasks);
+  };
+
+  const updateTask = (id: number, task: Task) => {
+    const tasks = state.tasks.map((item) => {
+      if (item.id === id) {
+        return task;
+      }
+      return item;
+    });
+    dispatch({ type: 'updateTasks', value: tasks });
+    setLocalStorageItem(LocalStorageItem.Tasks, tasks);
+  };
+
+  const deleteTask = (id: number) => {
+    const tasks = state.tasks.filter((item) => item.id !== id);
+    dispatch({ type: 'updateTasks', value: tasks });
+    setLocalStorageItem(LocalStorageItem.Tasks, tasks);
+  };
+
   return (
-    <StorageContext.Provider value={{ theme: state.theme, saveTheme }}>
+    <StorageContext.Provider
+      value={{
+        theme: state.theme,
+        tasks: state.tasks,
+        saveTheme,
+        saveTask,
+        updateTask,
+        deleteTask,
+      }}
+    >
       {children}
     </StorageContext.Provider>
   );
