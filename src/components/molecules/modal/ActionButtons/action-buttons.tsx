@@ -7,7 +7,7 @@ import {
 
 export const ModalActionButtons = ({
   handleCancelButtonClick,
-  handleAcceptButtonClick: handleAcceptButtonClick,
+  handleAcceptButtonClick,
 }: ModalActionButtonsProps) => {
   return (
     <ModalActionButtonsContainer>

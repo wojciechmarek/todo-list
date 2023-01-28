@@ -1,4 +1,4 @@
 export * from './TitleBar';
 export * from './SettingsContent';
-export * from './AddTaskContent';
+export * from './EditTaskContent';
 export * from './ActionButtons';

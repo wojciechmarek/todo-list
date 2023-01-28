@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { TextArea } from '../../../atoms';
 import { Input } from '../../../atoms/Input';
 
-export const AddTaskContainer = styled.div`
+export const EditTaskContainer = styled.div`
   width: calc(100% - 4em);
   flex-grow: 1;
   display: flex;
@@ -12,12 +12,12 @@ export const AddTaskContainer = styled.div`
   align-content: flex-start;
 `;
 
-export const AddTaskNameInput = styled(Input)`
+export const EditTaskNameInput = styled(Input)`
   margin-bottom: 1em;
   height: 3em;
 `;
 
-export const AddTaskDescriptionTextArea = styled(TextArea)`
+export const EditTaskDescriptionTextArea = styled(TextArea)`
   height: calc(100% - 4em);
   max-width: 100%;
   min-width: 100%;
