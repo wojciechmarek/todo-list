@@ -7,7 +7,7 @@ export const TaskItemContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 3em;
-  background-color: var(--theme-tile-button-bg-color);
+  background-color: var(--task-item-row-bg-color);
   width: 100%;
   margin-bottom: 0.5em;
   border: var(--standard-border);
@@ -29,6 +29,7 @@ export const TaskItemContainer = styled.div`
 export const TaskItemText = styled(Text)`
   margin-left: 1em;
   font-weight: 800;
+  color: var(--text-font-color);
 `;
 
 export const TaskItemActions = styled.div`
@@ -49,9 +50,11 @@ const CommonIconButton = styled(IconButton)`
 `;
 
 export const TaskItemDoneIconButton = styled(CommonIconButton)`
-  background-color: #00b894;
+  color: var(--button-font-color);
+  background-color: var(--task-item-done-button-bg-color);
 `;
 
 export const TaskItemRemoveIconButton = styled(CommonIconButton)`
-  background-color: #d63031;
+  color: var(--button-font-color);
+  background-color: var(--task-item-delete-button-bg-color);
 `;

@@ -36,6 +36,7 @@ export const StorageProvider = ({ children }: ProviderProps) => {
 
   const saveTask = (task: Task) => {
     task.id = new Date().getTime();
+    task.isDone = false;
     const tasks = [...state.tasks, task];
     dispatch({ type: 'updateTasks', value: tasks });
     setLocalStorageItem(LocalStorageItem.Tasks, tasks);
@@ -54,6 +55,21 @@ export const StorageProvider = ({ children }: ProviderProps) => {
 
   const deleteTask = (id: number) => {
     const tasks = state.tasks.filter((item) => item.id !== id);
+
+    dispatch({ type: 'updateTasks', value: tasks });
+    setLocalStorageItem(LocalStorageItem.Tasks, tasks);
+  };
+
+  const markTaskAsDone = (id: number) => {
+    const tasks = state.tasks.map((item) => {
+      if (item.id === id) {
+        console.log('item:', item);
+
+        return { ...item, isDone: true };
+      }
+      return item;
+    });
+
     dispatch({ type: 'updateTasks', value: tasks });
     setLocalStorageItem(LocalStorageItem.Tasks, tasks);
   };
@@ -67,6 +83,7 @@ export const StorageProvider = ({ children }: ProviderProps) => {
         saveTask,
         updateTask,
         deleteTask,
+        markTaskAsDone,
       }}
     >
       {children}

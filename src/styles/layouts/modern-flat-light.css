@@ -9,6 +9,9 @@
   --search-input-bg-color: #ecdde6;
   --search-input-border-and-icon-bg-color: #f3f2ed;
   --add-new-task-button-bg-color: #f3f2ed;
+  --task-item-row-bg-color: #f3f2ed;
+  --task-item-delete-button-bg-color: #ecdde6;
+  --task-item-done-button-bg-color: #ecdde6;
 
   --button-font-color: #1a161a;
   --text-font-color: #1a161a;

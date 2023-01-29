@@ -1,4 +1,4 @@
-import { Task } from '../../../../molecules';
+import { Task } from '../../../../../common';
 
 export interface AddTimeModalProps {
   handleCancelButtonClick: () => void;

@@ -8,4 +8,5 @@ export interface StorageProps {
   saveTask: (task: Task) => void;
   updateTask: (id: number, task: Task) => void;
   deleteTask: (id: number) => void;
+  markTaskAsDone: (id: number) => void;
 }
