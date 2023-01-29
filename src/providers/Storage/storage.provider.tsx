@@ -24,6 +24,7 @@ export const StorageProvider = ({ children }: ProviderProps) => {
         theme:
           getLocalStorageItem(LocalStorageItem.Theme) ??
           LocalStorageInitialState.theme,
+        tasks: getLocalStorageItem(LocalStorageItem.Tasks) ?? [],
       } as LocalStorageState;
     }
   );

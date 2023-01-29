@@ -9,7 +9,7 @@ import { ItemsTodo } from './views';
 
 export const MainContent = () => {
   const { openModal, closeModal } = useModalProvider();
-  const { saveTask } = useStorageProvider();
+  const { tasks, saveTask } = useStorageProvider();
 
   const handleAddTaskModalClick = () => {
     openModal(
@@ -32,7 +32,13 @@ export const MainContent = () => {
   return (
     <MainContentWrapper>
       <MainContentContainer>
-        <ItemsTodo handleAddTaskModalClick={handleAddTaskModalClick} />
+        <ItemsTodo
+          tasks={tasks}
+          handleAddTaskModalClick={handleAddTaskModalClick}
+          handleDoneButtonClick={console.log}
+          handleOnItemClick={console.log}
+          handleRemoveClick={console.log}
+        />
       </MainContentContainer>
     </MainContentWrapper>
   );

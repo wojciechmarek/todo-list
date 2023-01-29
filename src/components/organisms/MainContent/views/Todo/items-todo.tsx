@@ -3,18 +3,39 @@ import {
   ItemsTodoContainer,
   ItemsTodoDivider,
   ItemsTodoIconInput,
+  ItemsTodoList,
   ItemsTodoSearchAndAdd,
   ItemsTodoTitle,
 } from './items-todo.styled';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { Task } from '../../../../../common';
+import { TaskItem } from '../../../../molecules';
 
 export interface ItemsTodoProps {
+  tasks: Task[];
   handleAddTaskModalClick: () => void;
+  handleOnItemClick: (id: number) => void;
+  handleDoneButtonClick: (id: number) => void;
+  handleRemoveClick: (id: number) => void;
 }
 
 export const ItemsTodo = (props: ItemsTodoProps) => {
-  const { handleAddTaskModalClick } = props;
+  const { tasks, handleAddTaskModalClick } = props;
+
+  const handleOnItemClick = (id: number) => {
+    console.log('handleOnItemClick', id);
+  };
+
+  const handleDoneButtonClick = (id: number) => {
+    console.log('handleDoneButtonClick', id);
+  };
+
+  const handleRemoveClick = (id: number) => {
+    console.log('handleRemoveClick', id);
+  };
+
+  console.log('tasks', tasks);
 
   return (
     <ItemsTodoContainer>
@@ -30,6 +51,17 @@ export const ItemsTodo = (props: ItemsTodoProps) => {
         </ItemsTodoAddButton>
       </ItemsTodoSearchAndAdd>
       <ItemsTodoDivider />
+      <ItemsTodoList>
+        {tasks.map((task) => (
+          <TaskItem
+            key={task.id}
+            task={task}
+            handleDoneButtonClick={handleDoneButtonClick}
+            handleOnItemClick={handleOnItemClick}
+            handleRemoveClick={handleRemoveClick}
+          />
+        ))}
+      </ItemsTodoList>
     </ItemsTodoContainer>
   );
 };
