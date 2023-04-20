@@ -96,7 +96,15 @@ export const MobileNavbarTitleAndButton = styled.div`
   width: calc(100% - 2em);
 `;
 
-export const MobileNavbarList = styled.div``;
+export const MobileNavbarList = styled.div`
+  flex-grow: 1;
+
+  margin: 0.75em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const MobileNavbarItem = styled.div``;
 

@@ -23,7 +23,7 @@ import {
   Cog6ToothIcon,
 } from '@heroicons/react/24/outline';
 import { useNavbar } from './navbar.hook';
-import { DesktopNavbarButton } from '../../molecules';
+import { DesktopNavbarButton, MobileNavbarButton } from '../../molecules';
 import {
   useModalProvider,
   useThemeProvider,
@@ -32,7 +32,6 @@ import {
 import { SettingsModal } from '../Modal/views/Settings';
 import { ThemeType } from '../../../providers/Theme/theme.interface';
 import { useEffect } from 'react';
-import { Button } from '../../atoms';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
@@ -68,14 +67,14 @@ export const Navbar = () => {
     <>
       <MobileNavbar>
         <MobileNavbarMenuButton onClick={toggleExpand} icon={<Bars3Icon />} />
-        <MobileNavbarTitle text="Lorem ipsum" />
+        <MobileNavbarTitle text="ToDo List" />
         <MobileNavbarEmptySpace />
       </MobileNavbar>
       <MobileNavbarContainer visible={isExpanded}>
         <MobileNavbarContent>
           <MobileNavbarTitleAndButton>
             <MobileNavbarEmptySpace />
-            <MobileNavbarTitle text="Lorem ipsum" />
+            <MobileNavbarTitle text="Menu" />
             <MobileNavbarMenuButton
               onClick={toggleExpand}
               icon={<XMarkIcon />}
@@ -84,12 +83,21 @@ export const Navbar = () => {
           <MobileNavbarList>
             <MobileNavbarItem />
           </MobileNavbarList>
+          <MobileNavbarButton
+            icon={<Cog6ToothIcon />}
+            name="Settings"
+            expanded={isExpanded}
+            onClick={() => {
+              toggleExpand();
+              handleOpenSettingsModalClick();
+            }}
+          />
         </MobileNavbarContent>
       </MobileNavbarContainer>
 
       <DesktopNavbar expanded={isExpanded}>
         <DesktopNavbarTitleAndButton>
-          <DesktopNavbarTitle expanded={isExpanded} text="TODO List" />
+          <DesktopNavbarTitle expanded={isExpanded} text="ToDo List" />
           <DesktopNavbarMenuButton
             expanded={isExpanded}
             onClick={toggleExpand}
