@@ -22,7 +22,7 @@ export const NavbarMenuButton = styled(IconButton)`
 
 // Mobile Navbar
 
-export const MobileNavbar = styled.nav<{ expanded: boolean }>`
+export const MobileNavbar = styled.nav`
   display: flex;
   height: 4.5em;
   width: calc(100% - 2em);
@@ -56,6 +56,49 @@ export const MobileNavbarTitle = styled(Text)`
 export const MobileNavbarMenuButton = styled(NavbarMenuButton)`
   margin-left: 0.75em;
 `;
+
+export const MobileNavbarContainer = styled.div<{ visible: boolean }>`
+  z-index: 1;
+  display: ${({ visible }) => (visible ? 'flex' : 'none')};
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileNavbarContent = styled.div`
+  width: 95%;
+  height: 97.5%;
+
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+
+  background-color: var(--modal-bg-color);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--modal-box-shadow);
+  border: var(--standard-border);
+  backdrop-filter: var(--backdrop-filter);
+`;
+
+export const MobileNavbarTitleAndButton = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+  height: 2.5em;
+  width: calc(100% - 2em);
+`;
+
+export const MobileNavbarList = styled.div``;
+
+export const MobileNavbarItem = styled.div``;
 
 // Desktop Navbar
 

@@ -10,6 +10,11 @@ import {
   MobileNavbarEmptySpace,
   DesktopNavbarMenuButton,
   MobileNavbarMenuButton,
+  MobileNavbarContainer,
+  MobileNavbarContent,
+  MobileNavbarTitleAndButton,
+  MobileNavbarList,
+  MobileNavbarItem,
 } from './navbar.styled';
 
 import {
@@ -27,6 +32,7 @@ import {
 import { SettingsModal } from '../Modal/views/Settings';
 import { ThemeType } from '../../../providers/Theme/theme.interface';
 import { useEffect } from 'react';
+import { Button } from '../../atoms';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
@@ -60,14 +66,27 @@ export const Navbar = () => {
 
   return (
     <>
-      <MobileNavbar expanded={isExpanded}>
-        <MobileNavbarMenuButton
-          onClick={toggleExpand}
-          icon={isExpanded ? <XMarkIcon /> : <Bars3Icon />}
-        />
-        <MobileNavbarTitle text="Lorem ipsum"></MobileNavbarTitle>
+      <MobileNavbar>
+        <MobileNavbarMenuButton onClick={toggleExpand} icon={<Bars3Icon />} />
+        <MobileNavbarTitle text="Lorem ipsum" />
         <MobileNavbarEmptySpace />
       </MobileNavbar>
+      <MobileNavbarContainer visible={isExpanded}>
+        <MobileNavbarContent>
+          <MobileNavbarTitleAndButton>
+            <MobileNavbarEmptySpace />
+            <MobileNavbarTitle text="Lorem ipsum" />
+            <MobileNavbarMenuButton
+              onClick={toggleExpand}
+              icon={<XMarkIcon />}
+            />
+          </MobileNavbarTitleAndButton>
+          <MobileNavbarList>
+            <MobileNavbarItem />
+          </MobileNavbarList>
+        </MobileNavbarContent>
+      </MobileNavbarContainer>
+
       <DesktopNavbar expanded={isExpanded}>
         <DesktopNavbarTitleAndButton>
           <DesktopNavbarTitle expanded={isExpanded} text="TODO List" />
