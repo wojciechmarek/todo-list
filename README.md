@@ -27,7 +27,7 @@ All design styles are written from scratch. This application does not use any UI
 - 🛠️ **Tools:** yarn, eslint, prettier, husky, speedy web compiler, conventional commits, storybook
 - 🎨 **Styling:** styled-components by emotion
 - 🧪 **Testing:** jest, react-testing-library
-- 💎 **Others:** mobile first approach, atomic design, progressive web app
+- 💎 **Others:** desktop first approach, atomic design, progressive web app
 
 ## How to run
 
