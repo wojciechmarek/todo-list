@@ -11,17 +11,17 @@ import {
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { TaskItem } from '../../../../molecules';
 import { ItemsTodoProps } from './items-todo.interface';
+import { useItemsTodo } from './items-todo.hook';
 
 export const ItemsTodo = (props: ItemsTodoProps) => {
   const {
-    tasks,
     handleAddTaskModalClick,
     handleDoneButtonClick,
     handleOnItemClick,
     handleRemoveClick,
   } = props;
 
-  console.log('tasks', tasks);
+  const { filteredTasks, handleSearchInputChange } = useItemsTodo(props);
 
   return (
     <ItemsTodoContainer>
@@ -30,7 +30,7 @@ export const ItemsTodo = (props: ItemsTodoProps) => {
         <ItemsTodoIconInput
           icon={<MagnifyingGlassIcon />}
           placeholder="Search"
-          handleInputChange={console.log}
+          handleInputChange={handleSearchInputChange}
         />
         <ItemsTodoAddButton onClick={handleAddTaskModalClick}>
           New task
@@ -38,7 +38,7 @@ export const ItemsTodo = (props: ItemsTodoProps) => {
       </ItemsTodoSearchAndAdd>
       <ItemsTodoDivider />
       <ItemsTodoList>
-        {tasks.map((task) => (
+        {filteredTasks.map((task) => (
           <TaskItem
             key={task.id}
             task={task}
