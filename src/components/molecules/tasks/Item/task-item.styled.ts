@@ -6,7 +6,8 @@ export const TaskItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 3em;
+  min-height: 3em;
+  height: fit-content;
   background-color: var(--task-item-row-bg-color);
   width: 100%;
   margin-bottom: 0.5em;
@@ -26,10 +27,24 @@ export const TaskItemContainer = styled.div`
   }
 `;
 
+export const TaskItemTitleDescription = styled.div`
+  display: flex;
+  flex-grow: 1;
+  items-align: center;
+`;
+
 export const TaskItemText = styled(Text)`
   margin-left: 1em;
   font-weight: 800;
   color: var(--text-font-color);
+`;
+
+export const TaskItemDescription = styled(Text)`
+  margin-left: 1em;
+  font-weight: 800;
+  filter: opacity(0.6);
+  color: var(--text-font-color);
+  text-overflow: ellipsis;
 `;
 
 export const TaskItemActions = styled.div`

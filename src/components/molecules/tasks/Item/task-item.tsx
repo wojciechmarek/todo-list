@@ -2,9 +2,11 @@ import { TaskItemProps } from './task-item.interface';
 import {
   TaskItemActions,
   TaskItemContainer,
+  TaskItemDescription,
   TaskItemDoneIconButton,
   TaskItemRemoveIconButton,
   TaskItemText,
+  TaskItemTitleDescription,
 } from './task-item.styled';
 
 import { CheckIcon, TrashIcon } from '@heroicons/react/24/outline';
@@ -40,7 +42,10 @@ export const TaskItem = (props: TaskItemProps) => {
 
   return (
     <TaskItemContainer onClick={onContainerClick}>
-      <TaskItemText text={props.task.title} />
+      <TaskItemTitleDescription>
+        <TaskItemText text={props.task.title} />
+        <TaskItemDescription text={props.task.description} />
+      </TaskItemTitleDescription>
       <TaskItemActions>
         <TaskItemDoneIconButton
           onClick={onDoneButtonClick}
