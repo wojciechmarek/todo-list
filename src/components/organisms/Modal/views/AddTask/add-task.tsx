@@ -27,6 +27,7 @@ export const AddTaskModal = (props: AddTimeModalProps) => {
       />
       <ModalEditTaskContent control={control} />
       <ModalActionButtons
+        label={{ cancelButton: 'Cancel', acceptButton: 'Save' }}
         handleCancelButtonClick={handleCancelButtonClick}
         handleAcceptButtonClick={handleAcceptButtonClick}
       />

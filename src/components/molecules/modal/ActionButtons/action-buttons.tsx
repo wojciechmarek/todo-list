@@ -6,16 +6,17 @@ import {
 } from './action-buttons.styled';
 
 export const ModalActionButtons = ({
+  label,
   handleCancelButtonClick,
   handleAcceptButtonClick,
 }: ModalActionButtonsProps) => {
   return (
     <ModalActionButtonsContainer>
       <ModalCancelButton onClick={handleCancelButtonClick}>
-        Reject
+        {{ label.cancelButton }}
       </ModalCancelButton>
       <ModalAcceptButton onClick={handleAcceptButtonClick}>
-        Save
+        {{ label.acceptButton }}
       </ModalAcceptButton>
     </ModalActionButtonsContainer>
   );
