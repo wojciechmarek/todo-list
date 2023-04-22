@@ -6,5 +6,4 @@ export interface ItemsTodoProps {
   handleOnItemClick: (id: number) => void;
   handleDoneButtonClick: (id: number) => void;
   handleRemoveClick: (id: number) => void;
-  handleSearchInputChange: (value: string) => void;
 }
