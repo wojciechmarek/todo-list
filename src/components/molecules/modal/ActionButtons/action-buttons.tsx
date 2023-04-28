@@ -13,10 +13,10 @@ export const ModalActionButtons = ({
   return (
     <ModalActionButtonsContainer>
       <ModalCancelButton onClick={handleCancelButtonClick}>
-        {{ label.cancelButton }}
+        {label.cancelButton}
       </ModalCancelButton>
       <ModalAcceptButton onClick={handleAcceptButtonClick}>
-        {{ label.acceptButton }}
+        {label.acceptButton}
       </ModalAcceptButton>
     </ModalActionButtonsContainer>
   );
