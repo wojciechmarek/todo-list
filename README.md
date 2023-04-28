@@ -29,6 +29,13 @@ All design styles are written from scratch. This application does not use any UI
 - 🧪 **Testing:** jest, react-testing-library
 - 💎 **Others:** desktop first approach, atomic design, progressive web app
 
+## Storybook
+
+To see all components in isolation:
+
+1. Run `yarn storybook` in the root directory.
+2. Open `http://localhost:6006` in your browser.
+
 ## How to run
 
 1. Install [Node.js](https://nodejs.org/en/download/).
