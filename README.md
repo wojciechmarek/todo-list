@@ -21,6 +21,11 @@ All design styles are written from scratch. This application does not use any UI
 - Glassmorphism
 - Cardboard
 
+## Screenshot
+
+![all-in-one](https://github.com/wojciechmarek/todo-list/assets/27026036/3d663019-eef6-469f-9871-df8135bac2f7)
+
+
 ## Used technologies
 
 - 🎁 **Project:** vite, react, typescript
