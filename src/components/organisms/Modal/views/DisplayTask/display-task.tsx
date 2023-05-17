@@ -1,7 +1,4 @@
-import {
-  ModalActionButtons,
-  ModalTitleBar,
-} from '../../../../molecules';
+import { ModalActionButtons, ModalTitleBar } from '../../../../molecules';
 import { DisplayTaskModalProps } from './display-task.interface';
 import { DisplayTaskModalStyle } from './display-task.styled';
 
@@ -18,8 +15,8 @@ export const DisplayTaskModal = (props: DisplayTaskModalProps) => {
         handleCloseClick={handleCancelButtonClick}
         title="Task details"
       />
-      <p>{{ task.title }}</p>
-      <p>{{ task.description }}</p>
+      <p>{task.title}</p>
+      <p>{task.description}</p>
       <ModalActionButtons
         label={{ cancelButton: 'Cancel', acceptButton: 'Edit' }}
         handleCancelButtonClick={handleCancelButtonClick}
