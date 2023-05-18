@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      includeAssets: [''],
+      includeAssets: ['favicon.ico', 'vite.svg'],
       manifest: {
         name: 'Todo List',
-        short_name: 'MyApp',
-        description: 'Multi UI design todo list for your daily life',
+        short_name: 'Todos',
+        description: 'The multi UI todo list for your daily life',
         theme_color: '#ffffff',
         icons: [
           {
