@@ -1,5 +1,5 @@
 [data-theme='glassmorphism'] {
-  --background: url('/src/assets/backgrounds/glassmorphism.jpg');
+  --background: url('/src/assets/backgrounds/glassmorphism.webp');
   --nav-and-content-bg-color: #ffffff40;
   --modal-bg-color: #ffffff40;
   --modal-cross-button-bg-color: #60c0bf;
@@ -26,5 +26,5 @@
 
   --standard-border-radius: 0.75em;
   --standard-border: 0;
-  --backdrop-filter: blur(5px);
+  --backdrop-filter: blur(10px);
 }
