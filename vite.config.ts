@@ -7,7 +7,20 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
+      includeAssets: [''],
+      manifest: {
+        name: 'Todo List',
+        short_name: 'MyApp',
+        description: 'Multi UI design todo list for your daily life',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: 'list.png',
+            sizes: '256x256',
+            type: 'image/png',
+          },
+        ],
+      },
     }),
   ],
 });
