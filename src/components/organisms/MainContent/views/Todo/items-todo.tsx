@@ -8,7 +8,7 @@ import {
   ItemsTodoTitle,
 } from './items-todo.styled';
 
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { Search } from 'lucide-react';
 import { TaskItem } from '../../../../molecules';
 import { ItemsTodoProps } from './items-todo.interface';
 import { useItemsTodo } from './items-todo.hook';
@@ -28,7 +28,7 @@ export const ItemsTodo = (props: ItemsTodoProps) => {
       <ItemsTodoTitle title="Things to do:" />
       <ItemsTodoSearchAndAdd>
         <ItemsTodoIconInput
-          icon={<MagnifyingGlassIcon />}
+          icon={<Search color="black" />}
           placeholder="Search"
           handleInputChange={handleSearchInputChange}
         />

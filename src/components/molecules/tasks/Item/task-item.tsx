@@ -9,7 +9,8 @@ import {
   TaskItemTitleDescription,
 } from './task-item.styled';
 
-import { CheckIcon, TrashIcon } from '@heroicons/react/24/outline';
+import { Check, Trash2 } from 'lucide-react';
+
 import { useCallback } from 'react';
 
 export const TaskItem = (props: TaskItemProps) => {
@@ -47,13 +48,10 @@ export const TaskItem = (props: TaskItemProps) => {
         <TaskItemDescription text={props.task.description} />
       </TaskItemTitleDescription>
       <TaskItemActions>
-        <TaskItemDoneIconButton
-          onClick={onDoneButtonClick}
-          icon={<CheckIcon />}
-        />
+        <TaskItemDoneIconButton onClick={onDoneButtonClick} icon={<Check />} />
         <TaskItemRemoveIconButton
           onClick={onRemoveButtonClick}
-          icon={<TrashIcon />}
+          icon={<Trash2 />}
         />
       </TaskItemActions>
     </TaskItemContainer>

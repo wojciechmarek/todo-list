@@ -1,4 +1,4 @@
-import { XMarkIcon } from '@heroicons/react/24/outline';
+import { X } from 'lucide-react';
 import { ModalTitleBarProps } from './title-bar.interface';
 import {
   ModalTitleBarContainer,
@@ -13,7 +13,7 @@ export const ModalTitleBar = ({
   return (
     <ModalTitleBarContainer>
       <ModalTitleBarText text={title}></ModalTitleBarText>
-      <ModalTitleBarIcon icon={<XMarkIcon />} onClick={handleCloseClick} />
+      <ModalTitleBarIcon icon={<X />} onClick={handleCloseClick} />
     </ModalTitleBarContainer>
   );
 };

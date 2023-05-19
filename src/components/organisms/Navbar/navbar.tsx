@@ -17,11 +17,8 @@ import {
   MobileNavbarItem,
 } from './navbar.styled';
 
-import {
-  Bars3Icon,
-  XMarkIcon,
-  Cog6ToothIcon,
-} from '@heroicons/react/24/outline';
+import { Menu, X, Settings } from 'lucide-react';
+
 import { useNavbar } from './navbar.hook';
 import { DesktopNavbarButton, MobileNavbarButton } from '../../molecules';
 import {
@@ -66,7 +63,7 @@ export const Navbar = () => {
   return (
     <>
       <MobileNavbar>
-        <MobileNavbarMenuButton onClick={toggleExpand} icon={<Bars3Icon />} />
+        <MobileNavbarMenuButton onClick={toggleExpand} icon={<Menu />} />
         <MobileNavbarTitle text="ToDo List" />
         <MobileNavbarEmptySpace />
       </MobileNavbar>
@@ -75,16 +72,13 @@ export const Navbar = () => {
           <MobileNavbarTitleAndButton>
             <MobileNavbarEmptySpace />
             <MobileNavbarTitle text="Menu" />
-            <MobileNavbarMenuButton
-              onClick={toggleExpand}
-              icon={<XMarkIcon />}
-            />
+            <MobileNavbarMenuButton onClick={toggleExpand} icon={<X />} />
           </MobileNavbarTitleAndButton>
           <MobileNavbarList>
             <MobileNavbarItem />
           </MobileNavbarList>
           <MobileNavbarButton
-            icon={<Cog6ToothIcon />}
+            icon={<Settings />}
             name="Settings"
             expanded={isExpanded}
             onClick={() => {
@@ -101,7 +95,7 @@ export const Navbar = () => {
           <DesktopNavbarMenuButton
             expanded={isExpanded}
             onClick={toggleExpand}
-            icon={isExpanded ? <XMarkIcon /> : <Bars3Icon />}
+            icon={isExpanded ? <X /> : <Menu />}
           />
         </DesktopNavbarTitleAndButton>
         <NavbarDivider />
@@ -110,7 +104,7 @@ export const Navbar = () => {
         </DesktopNavbarList>
         <NavbarDivider />
         <DesktopNavbarButton
-          icon={<Cog6ToothIcon />}
+          icon={<Settings />}
           name="Settings"
           expanded={isExpanded}
           onClick={handleOpenSettingsModalClick}
