@@ -1,7 +1,7 @@
-import { ThemeType } from '../../../../../providers';
+import { Theme } from '../../../../../common';
 
 export interface SettingsModalProps {
-  theme: ThemeType;
+  theme: Theme;
   handleCloseClick: () => void;
-  handleThemeClick: (theme: ThemeType) => void;
+  handleThemeClick: (theme: Theme) => void;
 }

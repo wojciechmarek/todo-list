@@ -9,4 +9,5 @@ export const SettingsContainer = styled.div`
   grid-template-columns: auto auto;
   justify-content: center;
   align-content: flex-start;
+  overflow: auto;
 `;

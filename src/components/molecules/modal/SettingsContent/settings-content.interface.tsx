@@ -1,6 +1,6 @@
-import { ThemeType } from '../../../../providers';
+import { Theme } from '../../../../common';
 
 export interface ModalSettingsContentProps {
-  theme: ThemeType;
-  handleThemeClick: (tile: ThemeType) => void;
+  theme: Theme;
+  handleThemeClick: (tile: Theme) => void;
 }

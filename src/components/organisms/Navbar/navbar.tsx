@@ -27,8 +27,8 @@ import {
   useStorageProvider,
 } from '../../../providers';
 import { SettingsModal } from '../Modal/views/Settings';
-import { ThemeType } from '../../../providers/Theme/theme.interface';
 import { useEffect } from 'react';
+import { Theme } from '../../../common';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
@@ -41,7 +41,7 @@ export const Navbar = () => {
     closeModal();
   };
 
-  const handleThemeTileClick = (theme: ThemeType) => {
+  const handleThemeTileClick = (theme: Theme) => {
     changeTheme(theme);
     saveTheme(theme);
   };

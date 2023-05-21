@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { ProviderProps } from '../Common';
 import { ThemeContext } from './theme.context';
-import { ThemeType } from './theme.interface';
+import { Theme } from '../../common';
 
 export const ThemeProvider = ({ children }: ProviderProps) => {
-  const [theme, setTheme] = useState<ThemeType>('modern-flat-dark');
+  const [theme, setTheme] = useState<Theme>(Theme.ModernDark);
 
-  const changeTheme = (theme: ThemeType) => {
+  const changeTheme = (theme: Theme) => {
     setTheme(theme);
   };
 

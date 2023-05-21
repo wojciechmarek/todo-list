@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ThemeType } from '../../../../providers';
 import { ImageTile } from '../../common';
 import { ModalSettingsContentProps } from './settings-content.interface';
 import { SettingsContainer } from './settings-content.styled';
+import { Theme } from '../../../../common';
 
 export const ModalSettingsContent = ({
   theme,
@@ -10,7 +10,7 @@ export const ModalSettingsContent = ({
 }: ModalSettingsContentProps) => {
   const [currentTheme, setCurrentTheme] = useState(theme);
 
-  const handleClick = (theme: ThemeType) => {
+  const handleClick = (theme: Theme) => {
     handleThemeClick(theme);
     setCurrentTheme(theme);
   };
@@ -18,34 +18,59 @@ export const ModalSettingsContent = ({
   return (
     <SettingsContainer>
       <ImageTile
-        isActive={currentTheme === 'modern-flat-dark'}
+        isActive={currentTheme === Theme.ModernDark}
         text="Modern flat dark"
-        handleThemeClick={() => handleClick('modern-flat-dark')}
+        handleThemeClick={() => handleClick(Theme.ModernDark)}
       />
       <ImageTile
-        isActive={currentTheme === 'modern-flat-light'}
+        isActive={currentTheme === Theme.ModernLight}
         text="Modern flat light"
-        handleThemeClick={() => handleClick('modern-flat-light')}
+        handleThemeClick={() => handleClick(Theme.ModernLight)}
       />
       <ImageTile
-        isActive={currentTheme === 'bruthalism'}
+        isActive={currentTheme === Theme.Bruthalism}
         text="Bruthalism"
-        handleThemeClick={() => handleClick('bruthalism')}
+        handleThemeClick={() => handleClick(Theme.Bruthalism)}
       />
       <ImageTile
-        isActive={currentTheme === 'neobruthalism'}
+        isActive={currentTheme === Theme.Neobruthalism}
         text="Neobruthalism"
-        handleThemeClick={() => handleClick('neobruthalism')}
+        handleThemeClick={() => handleClick(Theme.Neobruthalism)}
       />
       <ImageTile
-        isActive={currentTheme === 'cardboard'}
+        isActive={currentTheme === Theme.Cardboard}
         text="Cardboard"
-        handleThemeClick={() => handleClick('cardboard')}
+        handleThemeClick={() => handleClick(Theme.Cardboard)}
       />
       <ImageTile
-        isActive={currentTheme === 'glassmorphism'}
+        isActive={currentTheme === Theme.Glassmorphism}
         text="Glassmorphism"
-        handleThemeClick={() => handleClick('glassmorphism')}
+        handleThemeClick={() => handleClick(Theme.Glassmorphism)}
+      />
+      <ImageTile
+        isActive={currentTheme === Theme.Claymorphism}
+        text="Claymorphism"
+        handleThemeClick={() => handleClick(Theme.Claymorphism)}
+      />
+      <ImageTile
+        isActive={currentTheme === Theme.Neumorphism}
+        text="Neumorphism"
+        handleThemeClick={() => handleClick(Theme.Neobruthalism)}
+      />
+      <ImageTile
+        isActive={currentTheme === Theme.Aurora}
+        text="Aurora"
+        handleThemeClick={() => handleClick(Theme.Aurora)}
+      />
+      <ImageTile
+        isActive={currentTheme === Theme.AppleCupertino}
+        text="Apple Cupertino"
+        handleThemeClick={() => handleClick(Theme.AppleCupertino)}
+      />
+      <ImageTile
+        isActive={currentTheme === Theme.GoogleMaterial}
+        text="Google Material"
+        handleThemeClick={() => handleClick(Theme.GoogleMaterial)}
       />
     </SettingsContainer>
   );

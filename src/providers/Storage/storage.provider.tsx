@@ -1,7 +1,6 @@
 import { useReducer } from 'react';
-import { Task } from '../../common';
+import { Task, Theme } from '../../common';
 import { ProviderProps } from '../Common';
-import { ThemeType } from '../Theme/theme.interface';
 import {
   getLocalStorageItem,
   LocalStorageItem,
@@ -29,7 +28,7 @@ export const StorageProvider = ({ children }: ProviderProps) => {
     }
   );
 
-  const saveTheme = (theme: ThemeType) => {
+  const saveTheme = (theme: Theme) => {
     dispatch({ type: 'updateTheme', value: theme });
     setLocalStorageItem(LocalStorageItem.Theme, theme);
   };

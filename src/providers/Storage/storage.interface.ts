@@ -1,10 +1,9 @@
-import { Task } from '../../common';
-import { ThemeType } from '../Theme/theme.interface';
+import { Task, Theme } from '../../common';
 
 export interface StorageProps {
-  theme: ThemeType;
+  theme: Theme;
   tasks: Task[];
-  saveTheme: (theme: ThemeType) => void;
+  saveTheme: (theme: Theme) => void;
   saveTask: (task: Task) => void;
   updateTask: (id: number, task: Task) => void;
   deleteTask: (id: number) => void;

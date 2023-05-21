@@ -1,7 +1,6 @@
-import { Task } from '../../../common';
-import { ThemeType } from '../../Theme/theme.interface';
+import { Task, Theme } from '../../../common';
 
 export type LocalStorageAction =
-  | { type: 'updateTheme'; value: ThemeType }
+  | { type: 'updateTheme'; value: Theme }
   | { type: 'updateTasks'; value: Task[] }
   | { type: 'clearAllData' };

@@ -1,13 +1,6 @@
-export interface ThemeProps {
-  theme: ThemeType;
-  changeTheme: (theme: ThemeType) => void;
-}
+import { Theme } from '../../common/enums/theme';
 
-export type ThemeType =
-  | 'modern-flat-dark'
-  | 'modern-flat-light'
-  | 'glassmorphism'
-  | 'bruthalism'
-  | 'claymorphism'
-  | 'cardboard'
-  | 'neobruthalism';
+export interface ThemeProps {
+  theme: Theme;
+  changeTheme: (theme: Theme) => void;
+}

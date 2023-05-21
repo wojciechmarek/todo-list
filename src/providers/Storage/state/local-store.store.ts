@@ -1,12 +1,11 @@
-import { Task } from '../../../common';
-import { ThemeType } from '../../Theme/theme.interface';
+import { Task, Theme } from '../../../common';
 
 export interface LocalStorageState {
-  theme: ThemeType;
+  theme: Theme;
   tasks: Task[];
 }
 
 export const LocalStorageInitialState: LocalStorageState = {
-  theme: 'modern-flat-dark',
+  theme: Theme.ModernDark,
   tasks: [],
 };
