@@ -55,7 +55,7 @@ export const ModalSettingsContent = ({
       <ImageTile
         isActive={currentTheme === Theme.Neumorphism}
         text="Neumorphism"
-        handleThemeClick={() => handleClick(Theme.Neobruthalism)}
+        handleThemeClick={() => handleClick(Theme.Neumorphism)}
       />
       <ImageTile
         isActive={currentTheme === Theme.Aurora}
