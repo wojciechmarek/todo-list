@@ -1,0 +1,32 @@
+[data-theme='aurora'] {
+  --background: #f3f2ed;
+  --nav-and-content-bg-color: #ecdde6;
+  --modal-bg-color: #f3f2ed;
+  --modal-cross-button-bg-color: #ecdde6;
+  --navbar-menu-button-bg-color: #f3f2ed;
+  --navbar-settings-button-bg-color: #f3f2ed;
+  --theme-tile-button-bg-color: #ecdde6;
+  --search-input-bg-color: #ecdde6;
+  --search-input-border-and-icon-bg-color: #f3f2ed;
+  --add-new-task-button-bg-color: #f3f2ed;
+  --task-item-row-bg-color: #f3f2ed;
+  --task-item-delete-button-bg-color: #ecdde6;
+  --task-item-done-button-bg-color: #ecdde6;
+
+  --button-font-color: #1a161a;
+  --text-font-color: #1a161a;
+  --search-magnifier-color: #1a161a;
+
+  --navbar-content-background: #f3f2ed;
+
+  --divider-color: #f3f2ed;
+
+  /* --------- */
+
+  --modal-box-shadow: 0 0 50px 0 #bbaaaa;
+  --container-box-shadow: 0;
+
+  --standard-border-radius: 0.75em;
+  --standard-border: 0;
+  --backdrop-filter: 0;
+}
