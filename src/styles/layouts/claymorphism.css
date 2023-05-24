@@ -1,17 +1,21 @@
 [data-theme='claymorphism'] {
-  --background: #f3f2ed;
-  --nav-and-content-bg-color: #ecdde6;
-  --modal-bg-color: #f3f2ed;
-  --modal-cross-button-bg-color: #ecdde6;
-  --navbar-menu-button-bg-color: #f3f2ed;
-  --navbar-settings-button-bg-color: #f3f2ed;
-  --theme-tile-button-bg-color: #ecdde6;
-  --search-input-bg-color: #ecdde6;
-  --search-input-border-and-icon-bg-color: #f3f2ed;
-  --add-new-task-button-bg-color: #f3f2ed;
-  --task-item-row-bg-color: #f3f2ed;
-  --task-item-delete-button-bg-color: #ecdde6;
-  --task-item-done-button-bg-color: #ecdde6;
+  --background: linear-gradient(
+    45deg,
+    rgba(198, 17, 132, 1) 0%,
+    rgba(200, 35, 103, 1) 100%
+  );
+  --nav-and-content-bg-color: #cb5a90;
+  --modal-bg-color: #504393;
+  --modal-cross-button-bg-color: #c06060;
+  --navbar-menu-button-bg-color: #c06060;
+  --navbar-settings-button-bg-color: #d0ed51;
+  --theme-tile-button-bg-color: #d0ed51;
+  --search-input-bg-color: #49a6d1;
+  --search-input-border-and-icon-bg-color: #1a161a;
+  --add-new-task-button-bg-color: #14e169;
+  --task-item-row-bg-color: #f56ee3;
+  --task-item-delete-button-bg-color: #de2626;
+  --task-item-done-button-bg-color: #55d24a;
 
   --button-font-color: #1a161a;
   --text-font-color: #1a161a;
@@ -19,14 +23,17 @@
 
   --navbar-content-background: #f3f2ed;
 
-  --divider-color: #f3f2ed;
+  --divider-color: #1a161a;
 
   /* --------- */
 
-  --modal-box-shadow: 0 0 50px 0 #bbaaaa;
-  --container-box-shadow: 0;
+  --modal-box-shadow: 14px 24px 68px #ffffff81, inset -8px -8px 16px #00000070,
+    inset 0px 14px 28px #ffffff60;
 
-  --standard-border-radius: 0.75em;
+  --container-box-shadow: 4px 4px 30px #ffffff50, inset -8px -8px 16px #00000070,
+    inset 4px 4px 28px #ffffff60;
+
+  --standard-border-radius: 20px;
   --standard-border: 0;
-  --backdrop-filter: 0;
+  --backdrop-filter: blur(5px);
 }
