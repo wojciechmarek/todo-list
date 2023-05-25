@@ -1,17 +1,17 @@
 [data-theme='neumorphism'] {
-  --background: #f3f2ed;
-  --nav-and-content-bg-color: #ecdde6;
-  --modal-bg-color: #f3f2ed;
-  --modal-cross-button-bg-color: #ecdde6;
-  --navbar-menu-button-bg-color: #f3f2ed;
-  --navbar-settings-button-bg-color: #f3f2ed;
-  --theme-tile-button-bg-color: #ecdde6;
+  --background: #e0e0e0;
+  --nav-and-content-bg-color: #e0e0e0;
+  --modal-bg-color: #e0e0e0;
+  --modal-cross-button-bg-color: #e0e0e0;
+  --navbar-menu-button-bg-color: #e0e0e0;
+  --navbar-settings-button-bg-color: #e0e0e0;
+  --theme-tile-button-bg-color: #e0e0e0;
   --search-input-bg-color: #ecdde6;
-  --search-input-border-and-icon-bg-color: #f3f2ed;
-  --add-new-task-button-bg-color: #f3f2ed;
-  --task-item-row-bg-color: #f3f2ed;
-  --task-item-delete-button-bg-color: #ecdde6;
-  --task-item-done-button-bg-color: #ecdde6;
+  --search-input-border-and-icon-bg-color: #e0e0e0;
+  --add-new-task-button-bg-color: #e0e0e0;
+  --task-item-row-bg-color: #e0e0e0;
+  --task-item-delete-button-bg-color: #e0e0e0;
+  --task-item-done-button-bg-color: #e0e0e0;
 
   --button-font-color: #1a161a;
   --text-font-color: #1a161a;
@@ -19,12 +19,12 @@
 
   --navbar-content-background: #f3f2ed;
 
-  --divider-color: #f3f2ed;
+  --divider-color: #1a161a;
 
   /* --------- */
 
-  --modal-box-shadow: 0 0 50px 0 #bbaaaa;
-  --container-box-shadow: 0;
+  --modal-box-shadow: 0;
+  --container-box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff;
 
   --standard-border-radius: 0.75em;
   --standard-border: 0;
