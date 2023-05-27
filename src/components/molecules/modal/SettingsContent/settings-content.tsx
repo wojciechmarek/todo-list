@@ -62,7 +62,7 @@ export const ModalSettingsContent = ({
         text="Aurora"
         handleThemeClick={() => handleClick(Theme.Aurora)}
       />
-      <ImageTile
+      {/* <ImageTile
         isActive={currentTheme === Theme.AppleCupertino}
         text="Apple Cupertino"
         handleThemeClick={() => handleClick(Theme.AppleCupertino)}
@@ -71,7 +71,7 @@ export const ModalSettingsContent = ({
         isActive={currentTheme === Theme.GoogleMaterial}
         text="Google Material"
         handleThemeClick={() => handleClick(Theme.GoogleMaterial)}
-      />
+      /> */}
     </SettingsContainer>
   );
 };
