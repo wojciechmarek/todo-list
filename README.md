@@ -9,7 +9,7 @@ Collect all design styles together in one place and learn how to implement them 
 ## Demo
 
 A live demo is available at [https://todo-list-rust-theta.vercel.app](https://todo-list-rust-theta.vercel.app).
-To change the theme, click the `Settings` button on the right navigation bar. Then, select the style you want to use.
+To change the theme, click the `Settings` button on the left navigation bar. Then, select the style you want to use.
 
 ## Design styles
 
@@ -54,4 +54,4 @@ To see all components in isolation:
 5. Type and run: `yarn dev` in the root directory.
 6. Open `http://localhost:5173` in your browser to see the app.
 
-**NOTICE ℹ️:** The repository contains also the **dev container** configuration for Visual Studio Code. If you have the Remote - Containers extension installed, you can run the project in a container instead of installing all dependencies on your local machine.
+> The repository contains also the **dev container** configuration for Visual Studio Code. If you have the Remote - Containers extension installed, you can run the project in a container instead of installing all dependencies on your local machine.
