@@ -13,7 +13,7 @@ export const NavbarMenuButton = styled(IconButton)`
   transition: filter 0.3s ease-in-out;
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);
-  box-shadow: var(--container-box-shadow);
+  box-shadow: var(--button-box-shadow);
 
   &:hover {
     filter: brightness(0.9);

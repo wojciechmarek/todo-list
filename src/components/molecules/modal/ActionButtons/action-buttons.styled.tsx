@@ -20,7 +20,7 @@ export const ModalCommonButton = styled(Button)`
   font-weight: 900;
   font-size: 1rem;
   border: var(--standard-border);
-  box-shadow: var(--container-box-shadow);
+  box-shadow: var(--button-box-shadow);
 `;
 
 export const ModalCancelButton = styled(ModalCommonButton)``;

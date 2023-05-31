@@ -43,7 +43,7 @@ export const ItemsTodoAddButton = styled(Button)`
   font-size: 1rem;
   border: var(--standard-border);
   transition: filter 0.3s ease-in-out;
-  box-shadow: var(--container-box-shadow);
+  box-shadow: var(--button-box-shadow);
 
   &:hover {
     filter: brightness(0.9);

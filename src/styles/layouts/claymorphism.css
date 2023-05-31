@@ -27,11 +27,14 @@
 
   /* --------- */
 
-  --modal-box-shadow: 14px 24px 68px #ffffff81, inset -8px -8px 16px #00000070,
-    inset 0px 14px 28px #ffffff60;
+  --modal-box-shadow: 4px 4px 10px #ffffff10, inset -8px -8px 16px #00000050,
+    inset 8px 8px 16px #ffffff40;
 
-  --container-box-shadow: 4px 4px 30px #ffffff50, inset -8px -8px 16px #00000070,
-    inset 4px 4px 28px #ffffff60;
+  --container-box-shadow: 4px 4px 10px #ffffff10, inset -8px -8px 16px #00000050,
+    inset 8px 8px 16px #ffffff40;
+
+  --button-box-shadow: 1px 1px 10px #ffffff30, inset -2px -2px 10px #00000090,
+    inset 2px 2px 10px #ffffffb0;
 
   --standard-border-radius: 20px;
   --standard-border: 0;

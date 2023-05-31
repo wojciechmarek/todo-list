@@ -13,7 +13,7 @@ export const TaskItemContainer = styled.div`
   margin-bottom: 0.5em;
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);
-  box-shadow: var(--container-box-shadow);
+  box-shadow: var(--button-box-shadow);
 
   transition: filter 0.3s ease-in-out;
   cursor: pointer;
@@ -61,7 +61,7 @@ const CommonIconButton = styled(IconButton)`
   border-radius: 0.6em;
   border: var(--standard-border);
   border-radius: var(--standard-border-radius);
-  box-shadow: var(--container-box-shadow);
+  box-shadow: var(--button-box-shadow);
 `;
 
 export const TaskItemDoneIconButton = styled(CommonIconButton)`

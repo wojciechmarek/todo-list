@@ -25,6 +25,7 @@
 
   --modal-box-shadow: 0;
   --container-box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff;
+  --button-box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff;
 
   --standard-border-radius: 0.75em;
   --standard-border: 0;
