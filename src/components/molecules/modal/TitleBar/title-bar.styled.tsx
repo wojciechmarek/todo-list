@@ -13,6 +13,7 @@ export const ModalTitleBarText = styled(Text)`
   font-size: 1.5em;
   color: var(--text-font-color);
   font-weight: 900;
+  text-shadow: var(--text-box-shadow);
 
   cursor: default;
 `;

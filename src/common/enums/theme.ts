@@ -8,6 +8,5 @@ export const enum Theme {
   Claymorphism = 'claymorphism',
   Neumorphism = 'neumorphism',
   Aurora = 'aurora',
-  GoogleMaterial = 'google-material',
-  AppleCupertino = 'apple-cupertino',
+  VfdDisplay = 'vfd-display',
 }

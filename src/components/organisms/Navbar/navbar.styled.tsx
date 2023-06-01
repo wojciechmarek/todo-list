@@ -51,6 +51,7 @@ export const MobileNavbarTitle = styled(Text)`
   color: var(--text-font-color);
   font-size: 1.5em;
   font-weight: 600;
+  text-shadow: var(--text-box-shadow);
 `;
 
 export const MobileNavbarMenuButton = styled(NavbarMenuButton)`
@@ -147,6 +148,7 @@ export const DesktopNavbarTitle = styled(Text)<{ expanded: boolean }>`
   font-size: 1em;
   font-weight: 600;
   cursor: default;
+  text-shadow: var(--text-box-shadow);
 `;
 
 export const DesktopNavbarMenuButton = styled(NavbarMenuButton)<{

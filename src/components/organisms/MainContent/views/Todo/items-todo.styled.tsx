@@ -16,6 +16,7 @@ export const ItemsTodoTitle = styled(Title)`
   font-weight: 900;
 
   color: var(--text-font-color);
+  text-shadow: var(--text-box-shadow);
 `;
 
 export const ItemsTodoSearchAndAdd = styled.div`
