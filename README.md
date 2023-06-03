@@ -24,10 +24,11 @@ All design styles are written from scratch. This application does not use any UI
 - Claymorphism
 - Neumorphism
 - Aurora (the dark theme with some subtle vector graphics in the background)
+- VFD Display (the dark theme with a retro VFD display glowing effect)
 
 ## Screenshot
 
-⚠️ The screenshot below is outdated. It does not show the latest design styles.
+⚠️ The screenshot below is outdated. It does not show all the design styles.
 ![all-in-one](https://github.com/wojciechmarek/todo-list/assets/27026036/3d663019-eef6-469f-9871-df8135bac2f7)
 
 ## Used technologies
