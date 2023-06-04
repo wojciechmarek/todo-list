@@ -13,7 +13,7 @@ export const ModalActionButtonsContainer = styled.div`
 
 export const ModalCommonButton = styled(Button)`
   background-color: var(--add-new-task-button-bg-color);
-  color: var(--text-font-color);
+  color: var(--button-font-color);
   border-radius: var(--standard-border-radius);
   height: 100%;
   width: calc((100% / 3) - 0.5em);

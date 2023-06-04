@@ -2,7 +2,7 @@
   --background: url('/src/assets/backgrounds/aurora.svg');
   --nav-and-content-bg-color: #1c123085;
   --modal-bg-color: #38246785;
-  --modal-cross-button-bg-color: #35641685;
+  --modal-cross-button-bg-color: #888604a6;
   --navbar-menu-button-bg-color: #18e4c285;
   --navbar-settings-button-bg-color: #18aae485;
   --theme-tile-button-bg-color: #13436585;
@@ -13,7 +13,7 @@
   --task-item-delete-button-bg-color: #c7121285;
   --task-item-done-button-bg-color: #08db1d85;
 
-  --button-font-color: #1a161a;
+  --button-font-color: #ecdde6;
   --text-font-color: #ecdde6;
   --search-magnifier-color: #1a161a;
 

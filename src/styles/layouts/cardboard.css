@@ -2,18 +2,18 @@
   --background: #ccc7be;
   --nav-and-content-bg-color: #ccc7be;
   --modal-bg-color: #ccc7be;
-  --modal-cross-button-bg-color: #1a161a;
-  --navbar-menu-button-bg-color: #1a161a;
-  --navbar-settings-button-bg-color: #1a161a;
+  --modal-cross-button-bg-color: #ccc7be;
+  --navbar-menu-button-bg-color: #ccc7be;
+  --navbar-settings-button-bg-color: #ccc7be;
   --theme-tile-button-bg-color: #ccc7be;
   --search-input-bg-color: #ccc7be;
   --search-input-border-and-icon-bg-color: #1a161a;
   --add-new-task-button-bg-color: #ccc7be;
   --task-item-row-bg-color: #ccc7be;
-  --task-item-delete-button-bg-color: #1a161a;
-  --task-item-done-button-bg-color: #1a161a;
+  --task-item-delete-button-bg-color: #ccc7be;
+  --task-item-done-button-bg-color: #ccc7be;
 
-  --button-font-color: #ccc7be;
+  --button-font-color: #1a161a;
   --text-font-color: #1a161a;
   --search-magnifier-color: #ccc7be;
 
@@ -24,6 +24,7 @@
   --modal-box-shadow: 0 0 20px #1a161a;
   --container-box-shadow: 0;
   --button-box-shadow: 0;
+  --divider-box-shadow: 0;
 
   --standard-border-radius: 0;
   --standard-border: 1px solid #1a161a;

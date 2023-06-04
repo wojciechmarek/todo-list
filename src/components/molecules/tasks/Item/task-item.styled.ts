@@ -36,14 +36,14 @@ export const TaskItemTitleDescription = styled.div`
 export const TaskItemText = styled(Text)`
   margin-left: 1em;
   font-weight: 800;
-  color: var(--text-font-color);
+  color: var(--button-font-color);
 `;
 
 export const TaskItemDescription = styled(Text)`
   margin-left: 1em;
   font-weight: 800;
   filter: opacity(0.6);
-  color: var(--text-font-color);
+  color: var(--button-font-color);
   text-overflow: ellipsis;
 `;
 
@@ -65,11 +65,11 @@ const CommonIconButton = styled(IconButton)`
 `;
 
 export const TaskItemDoneIconButton = styled(CommonIconButton)`
-  color: var(--button-font-color);
+  color: var(--text-font-color);
   background-color: var(--task-item-done-button-bg-color);
 `;
 
 export const TaskItemRemoveIconButton = styled(CommonIconButton)`
-  color: var(--button-font-color);
+  color: var(--text-font-color);
   background-color: var(--task-item-delete-button-bg-color);
 `;
