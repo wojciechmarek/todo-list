@@ -15,12 +15,25 @@ import {
   MobileNavbarTitleAndButton,
   MobileNavbarList,
   MobileNavbarItem,
+  DesktopNavbarLink,
+  MobileNavbarLink,
 } from './navbar.styled';
 
-import { Menu, X, Settings } from 'lucide-react';
+import {
+  Menu,
+  X,
+  Settings,
+  ListChecks,
+  CheckSquare,
+  XCircle,
+} from 'lucide-react';
 
 import { useNavbar } from './navbar.hook';
-import { DesktopNavbarButton, MobileNavbarButton } from '../../molecules';
+import {
+  CommonLink,
+  DesktopNavbarButton,
+  MobileNavbarButton,
+} from '../../molecules';
 import {
   useModalProvider,
   useThemeProvider,
@@ -60,6 +73,27 @@ export const Navbar = () => {
     );
   };
 
+  const menu = [
+    {
+      name: 'Tasks',
+      icon: <ListChecks />,
+      url: '/',
+      color: 'var(--navbar-settings-button-bg-color)',
+    },
+    {
+      name: 'Completed',
+      icon: <CheckSquare />,
+      url: '/completed',
+      color: 'var(--task-item-done-button-bg-color)',
+    },
+    {
+      name: 'Deleted',
+      icon: <XCircle />,
+      url: '/deleted',
+      color: 'var(--task-item-delete-button-bg-color)',
+    },
+  ];
+
   return (
     <>
       <MobileNavbar>
@@ -75,7 +109,16 @@ export const Navbar = () => {
             <MobileNavbarMenuButton onClick={toggleExpand} icon={<X />} />
           </MobileNavbarTitleAndButton>
           <MobileNavbarList>
-            <MobileNavbarItem />
+            {menu.map((item, index) => (
+              <MobileNavbarLink
+                key={index}
+                url={item.url}
+                text={item.name}
+                icon={item.icon}
+                color={item.color}
+                expanded={isExpanded}
+              />
+            ))}
           </MobileNavbarList>
           <MobileNavbarButton
             icon={<Settings />}
@@ -100,7 +143,16 @@ export const Navbar = () => {
         </DesktopNavbarTitleAndButton>
         <NavbarDivider />
         <DesktopNavbarList>
-          <DesktopNavbarItem />
+          {menu.map((item, index) => (
+            <DesktopNavbarLink
+              key={index}
+              url={item.url}
+              text={item.name}
+              icon={item.icon}
+              color={item.color}
+              expanded={isExpanded}
+            />
+          ))}
         </DesktopNavbarList>
         <NavbarDivider />
         <DesktopNavbarButton

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Divider, Text } from '../../atoms';
-import { IconButton } from '../../molecules';
+import { CommonLink, IconButton } from '../../molecules';
 
 // Common
 
@@ -105,6 +105,8 @@ export const MobileNavbarList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  gap: 0.75em;
 `;
 
 export const MobileNavbarItem = styled.div``;
@@ -164,14 +166,18 @@ export const NavbarDivider = styled(Divider)`
   background-color: var(--divider-color);
 `;
 
-export const DesktopNavbarList = styled.div`
+export const DesktopNavbarList = styled.ul`
   flex-grow: 1;
 
-  margin: 0.75em;
+  width: calc(100% - 1.5em);
+  margin: 1em 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  gap: 0.75em;
 `;
 
-export const DesktopNavbarItem = styled.div``;
+export const DesktopNavbarLink = styled(CommonLink)``;
+export const MobileNavbarLink = styled(CommonLink)``;

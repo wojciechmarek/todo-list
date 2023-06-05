@@ -1,3 +1,3 @@
 export * from './DesktopButton';
-export * from './DesktopLink';
+export * from './CommonLink';
 export * from './MobileButton';
