@@ -28,8 +28,8 @@ All design styles are written from scratch. This application does not use any UI
 
 ## Screenshot
 
-⚠️ The screenshot below is outdated. It does not show all the design styles.
-![all-in-one](https://github.com/wojciechmarek/todo-list/assets/27026036/3d663019-eef6-469f-9871-df8135bac2f7)
+![all-styles](https://github.com/wojciechmarek/todo-list/assets/27026036/412e9562-da0b-4e74-8561-2036df550935)
+
 
 ## Used technologies
 
