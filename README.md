@@ -26,7 +26,7 @@ All design styles are written from scratch. This application does not use any UI
 - Aurora (the dark theme with some subtle vector graphics in the background)
 - VFD Display (the dark theme with a retro VFD display glowing effect)
 
-## Screenshot
+## Screenshots
 
 ![all-styles](https://github.com/wojciechmarek/todo-list/assets/27026036/412e9562-da0b-4e74-8561-2036df550935)
 
