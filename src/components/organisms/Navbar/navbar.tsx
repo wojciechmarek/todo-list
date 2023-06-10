@@ -1,6 +1,5 @@
 import {
   DesktopNavbar,
-  DesktopNavbarItem,
   DesktopNavbarList,
   NavbarDivider,
   DesktopNavbarTitle,
@@ -14,7 +13,6 @@ import {
   MobileNavbarContent,
   MobileNavbarTitleAndButton,
   MobileNavbarList,
-  MobileNavbarItem,
   DesktopNavbarLink,
   MobileNavbarLink,
 } from './navbar.styled';
@@ -29,11 +27,7 @@ import {
 } from 'lucide-react';
 
 import { useNavbar } from './navbar.hook';
-import {
-  CommonLink,
-  DesktopNavbarButton,
-  MobileNavbarButton,
-} from '../../molecules';
+import { DesktopNavbarButton, MobileNavbarButton } from '../../molecules';
 import {
   useModalProvider,
   useThemeProvider,
