@@ -72,19 +72,19 @@ export const Navbar = () => {
       name: 'Tasks',
       icon: <ListChecks />,
       url: '/',
-      color: 'var(--navbar-settings-button-bg-color)',
+      color: 'var(--navbar-links-bg-color)',
     },
     {
       name: 'Completed',
       icon: <CheckSquare />,
       url: '/completed',
-      color: 'var(--task-item-done-button-bg-color)',
+      color: 'var(--navbar-links-bg-color)',
     },
     {
       name: 'Deleted',
       icon: <XCircle />,
       url: '/deleted',
-      color: 'var(--task-item-delete-button-bg-color)',
+      color: 'var(--navbar-links-bg-color)',
     },
   ];
 

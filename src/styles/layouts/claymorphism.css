@@ -5,9 +5,10 @@
     rgba(200, 35, 103, 1) 100%
   );
   --nav-and-content-bg-color: #cb5a90;
+  --navbar-links-bg-color: #5a61cb;
   --modal-bg-color: #504393;
   --modal-cross-button-bg-color: #c06060;
-  --navbar-menu-button-bg-color: #c06060;
+  --navbar-menu-button-bg-color: #4ddfd1;
   --navbar-settings-button-bg-color: #d0ed51;
   --theme-tile-button-bg-color: #d0ed51;
   --search-input-bg-color: #49a6d1;
