@@ -12,7 +12,7 @@
   --navbar-settings-button-bg-color: #d0ed51;
   --theme-tile-button-bg-color: #d0ed51;
   --search-input-bg-color: #49a6d1;
-  --search-input-border-and-icon-bg-color: #1a161a;
+  --search-input-border-and-icon-bg-color: 0;
   --add-new-task-button-bg-color: #14e169;
   --task-item-row-bg-color: #f56ee3;
   --task-item-delete-button-bg-color: #de2626;

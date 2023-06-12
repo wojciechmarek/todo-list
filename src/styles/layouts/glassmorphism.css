@@ -8,7 +8,7 @@
   --navbar-links-bg-color: #ffffff30;
   --theme-tile-button-bg-color: #ffffff30;
   --search-input-bg-color: #ffffff40;
-  --search-input-border-and-icon-bg-color: #ffffff40;
+  --search-input-border-and-icon-bg-color: #ffffff00;
   --add-new-task-button-bg-color: #ffffff40;
   --task-item-row-bg-color: #ffffff40;
   --task-item-delete-button-bg-color: #ffffff30;
@@ -16,7 +16,7 @@
 
   --button-font-color: #1a161a;
   --text-font-color: #1a161a;
-  --search-magnifier-color: #f6e6f6;
+  --search-magnifier-color: #1a161a50;
 
   --divider-color: #ffffff30;
 
