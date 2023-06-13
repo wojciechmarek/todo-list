@@ -16,7 +16,7 @@ export const CommonLink = ({
 }: CommonLinkProps) => {
   return (
     <CommonLinkContainer {...rest} color={color}>
-      <CommonLinkStyle href={url} target="_blank" rel="noreferrer">
+      <CommonLinkStyle href={url} rel="noreferrer">
         <CommonLinkIcon icon={icon} />
         <CommonLinkText expanded={expanded} text={text} />
       </CommonLinkStyle>

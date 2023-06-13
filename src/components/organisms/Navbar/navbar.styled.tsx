@@ -81,7 +81,7 @@ export const MobileNavbarContent = styled.div`
   flex-direction: column;
   align-content: flex-start;
 
-  background-color: var(--modal-bg-color);
+  background-color: var(--nav-and-content-bg-color);
   border-radius: var(--standard-border-radius);
   box-shadow: var(--modal-box-shadow);
   border: var(--standard-border);

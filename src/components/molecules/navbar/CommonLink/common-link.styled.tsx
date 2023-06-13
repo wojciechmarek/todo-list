@@ -23,8 +23,9 @@ export const CommonLinkContainer = styled.li<{ color: string }>`
 export const CommonLinkStyle = styled.a`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   text-decoration: none;
+  width: 100%;
 `;
 
 export const CommonLinkIcon = styled(Icon)`
