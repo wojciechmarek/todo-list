@@ -15,10 +15,12 @@ export const EditTaskContainer = styled.div`
 export const EditTaskNameInput = styled(Input)`
   margin-bottom: 1em;
   height: 3em;
+  box-shadow: var(--container-box-shadow);
 `;
 
 export const EditTaskDescriptionTextArea = styled(TextArea)`
   height: calc(100% - 4em);
   max-width: 100%;
   min-width: 100%;
+  box-shadow: var(--container-box-shadow);
 `;
