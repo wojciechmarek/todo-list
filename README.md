@@ -30,7 +30,6 @@ All design styles are written from scratch. This application does not use any UI
 
 ![all-styles](https://github.com/wojciechmarek/todo-list/assets/27026036/412e9562-da0b-4e74-8561-2036df550935)
 
-
 ## Used technologies
 
 - 🎁 **Project:** vite, react, typescript
