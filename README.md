@@ -33,8 +33,8 @@ All design styles are written from scratch. This application does not use any UI
 ## Used technologies
 
 - 🎁 **Project:** vite, react, typescript
-- 🛠️ **Tools:** yarn, eslint, prettier, husky, speedy web compiler, conventional commits, storybook
-- 🎨 **Styling:** styled-components by emotion
+- 🛠️ **Tools:** yarn, eslint, prettier, husky, speedy web compiler, conventional commits, storybook, react-hook-form, react-router
+- 🎨 **Styling:** styled-components by emotion, lucide icons
 - 🧪 **Testing:** jest, react-testing-library
 - 💎 **Others:** desktop-first approach, atomic design, progressive web app, docker and dev container
 

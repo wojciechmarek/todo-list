@@ -6,7 +6,8 @@ import {
   MainContentContainer,
   MainContentWrapper,
 } from './main-content.styled';
-import { ItemsTodo } from './views';
+import { ItemsCompleted, ItemsDeleted, ItemsTodo } from './views';
+import { Route, Routes, createBrowserRouter } from 'react-router-dom';
 
 export const MainContent = () => {
   const { openModal, closeModal } = useModalProvider();
@@ -45,13 +46,52 @@ export const MainContent = () => {
   return (
     <MainContentWrapper>
       <MainContentContainer>
-        <ItemsTodo
+        <Routes>
+          <Route
+            index
+            element={
+              <ItemsTodo
+                tasks={tasks}
+                handleAddTaskModalClick={handleAddTaskModalClick}
+                handleDoneButtonClick={handleDoneButtonClick}
+                handleOnItemClick={handleOnItemClick}
+                handleRemoveClick={handleRemoveClick}
+              />
+            }
+          />
+          <Route
+            path="deleted"
+            element={
+              <ItemsDeleted
+                tasks={tasks}
+                handleAddTaskModalClick={handleAddTaskModalClick}
+                handleDoneButtonClick={handleDoneButtonClick}
+                handleOnItemClick={handleOnItemClick}
+                handleRemoveClick={handleRemoveClick}
+              />
+            }
+          />
+          <Route
+            path="completed"
+            element={
+              <ItemsCompleted
+                tasks={tasks}
+                handleAddTaskModalClick={handleAddTaskModalClick}
+                handleDoneButtonClick={handleDoneButtonClick}
+                handleOnItemClick={handleOnItemClick}
+                handleRemoveClick={handleRemoveClick}
+              />
+            }
+          />
+          <Route path="*" element={<p>404</p>} />
+        </Routes>
+        {/* <ItemsTodo
           tasks={tasks}
           handleAddTaskModalClick={handleAddTaskModalClick}
           handleDoneButtonClick={handleDoneButtonClick}
           handleOnItemClick={handleOnItemClick}
           handleRemoveClick={handleRemoveClick}
-        />
+        /> */}
       </MainContentContainer>
     </MainContentWrapper>
   );

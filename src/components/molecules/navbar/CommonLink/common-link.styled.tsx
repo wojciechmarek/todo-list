@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Icon, Text } from '../../../atoms';
+import { Link } from 'react-router-dom';
 
 export const CommonLinkContainer = styled.li<{ color: string }>`
   display: flex;
@@ -20,7 +21,7 @@ export const CommonLinkContainer = styled.li<{ color: string }>`
   }
 `;
 
-export const CommonLinkStyle = styled.a`
+export const CommonLinkStyle = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: start;
