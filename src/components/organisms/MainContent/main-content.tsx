@@ -1,7 +1,3 @@
-import { useCallback } from 'react';
-import { Task } from '../../../common';
-import { useModalProvider, useStorageProvider } from '../../../providers';
-import { AddTaskModal } from '../Modal/views/AddTask';
 import {
   MainContentContainer,
   MainContentWrapper,
@@ -16,7 +12,7 @@ export const MainContent = () => {
         <Routes>
           <Route index element={<ItemsTodo />} />
           <Route path="deleted" element={<ItemsDeleted />} />
-          <Route path="completed" element={<ItemsCompleted />} />
+          <Route path="done" element={<ItemsCompleted />} />
           <Route path="*" element={<p>404</p>} />
         </Routes>
         {/* <ItemsTodo

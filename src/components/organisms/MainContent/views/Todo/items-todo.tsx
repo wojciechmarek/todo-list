@@ -9,16 +9,17 @@ import {
 } from './items-todo.styled';
 
 import { Search } from 'lucide-react';
-import { TaskItem } from '../../../../molecules';
 import { useItemsTodo } from './items-todo.hook';
 import { useModalProvider, useStorageProvider } from '../../../../../providers';
 import { useCallback } from 'react';
 import { AddTaskModal } from '../../../Modal/views/AddTask';
 import { Task } from '../../../../../common';
+import { TaskTodo } from '../../../../molecules';
 
 export const ItemsTodo = () => {
   const { openModal, closeModal } = useModalProvider();
-  const { tasks, saveTask, deleteTask, markTaskAsDone } = useStorageProvider();
+  const { tasks, saveTask, markTaskAsDeleted, markTaskAsDone } =
+    useStorageProvider();
 
   const handleAddTaskModalClick = useCallback(() => {
     openModal(
@@ -33,12 +34,12 @@ export const ItemsTodo = () => {
     console.log('handleOnItemClick', id);
   }, []);
 
-  const handleDoneButtonClick = useCallback((id: number) => {
+  const handleDoneClick = useCallback((id: number) => {
     markTaskAsDone(id);
   }, []);
 
   const handleRemoveClick = useCallback((id: number) => {
-    deleteTask(id);
+    markTaskAsDeleted(id);
   }, []);
 
   const handleCancelButtonClick = () => {
@@ -68,10 +69,10 @@ export const ItemsTodo = () => {
       <ItemsTodoDivider />
       <ItemsTodoList>
         {filteredTasks.map((task) => (
-          <TaskItem
+          <TaskTodo
             key={task.id}
             task={task}
-            handleDoneButtonClick={handleDoneButtonClick}
+            handleDoneClick={handleDoneClick}
             handleOnItemClick={handleOnItemClick}
             handleRemoveClick={handleRemoveClick}
           />

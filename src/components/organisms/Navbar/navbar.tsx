@@ -76,9 +76,9 @@ export const Navbar = () => {
       color: 'var(--navbar-links-bg-color)',
     },
     {
-      name: 'Completed',
+      name: 'Done',
       icon: <CheckSquare />,
-      url: '/completed',
+      url: '/done',
       color: 'var(--navbar-links-bg-color)',
     },
     {

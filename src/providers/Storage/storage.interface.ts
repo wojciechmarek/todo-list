@@ -8,4 +8,6 @@ export interface StorageProps {
   updateTask: (id: number, task: Task) => void;
   deleteTask: (id: number) => void;
   markTaskAsDone: (id: number) => void;
+  markTaskAsTodo: (id: number) => void;
+  markTaskAsDeleted: (id: number) => void;
 }

@@ -1,47 +1,42 @@
 import {
-  ItemsCompletedAddButton,
   ItemsCompletedContainer,
   ItemsCompletedDivider,
-  ItemsCompletedIconInput,
   ItemsCompletedList,
-  ItemsCompletedSearchAndAdd,
   ItemsCompletedTitle,
 } from './items-completed.styled';
 
-import { Search } from 'lucide-react';
-import { TaskItem } from '../../../../molecules';
 import { useItemsCompleted } from './items-completed.hook';
-import { useModalProvider, useStorageProvider } from '../../../../../providers';
+import { useStorageProvider } from '../../../../../providers';
 import { useCallback } from 'react';
+import { TaskCompleted } from '../../../../molecules/tasks/TaskCompleted';
 
 export const ItemsCompleted = () => {
-  const { openModal, closeModal } = useModalProvider();
-  const { tasks, saveTask, deleteTask, markTaskAsDone } = useStorageProvider();
+  const { tasks, deleteTask, markTaskAsTodo } = useStorageProvider();
 
   const handleOnItemClick = useCallback((id: number) => {
     console.log('handleOnItemClick', id);
   }, []);
 
-  const handleDoneButtonClick = useCallback((id: number) => {
-    markTaskAsDone(id);
+  const handleRestoreClick = useCallback((id: number) => {
+    markTaskAsTodo(id);
   }, []);
 
   const handleRemoveClick = useCallback((id: number) => {
     deleteTask(id);
   }, []);
 
-  const { filteredTasks, handleSearchInputChange } = useItemsCompleted(tasks);
+  const { filteredTasks } = useItemsCompleted(tasks);
 
   return (
     <ItemsCompletedContainer>
-      <ItemsCompletedTitle title="Things completed" />
+      <ItemsCompletedTitle title="Things done:" />
       <ItemsCompletedDivider />
       <ItemsCompletedList>
         {filteredTasks.map((task) => (
-          <TaskItem
+          <TaskCompleted
             key={task.id}
             task={task}
-            handleDoneButtonClick={handleDoneButtonClick}
+            handleRestoreClick={handleRestoreClick}
             handleOnItemClick={handleOnItemClick}
             handleRemoveClick={handleRemoveClick}
           />

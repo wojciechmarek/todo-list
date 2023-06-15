@@ -1,20 +1,20 @@
-import { TaskItemProps } from './task-item.interface';
+import { TaskDeletedProps } from './task-deleted.interface';
 import {
   TaskItemActions,
   TaskItemContainer,
   TaskItemDescription,
-  TaskItemDoneIconButton,
+  TaskItemRestoreIconButton,
   TaskItemRemoveIconButton,
   TaskItemText,
   TaskItemTitleDescription,
-} from './task-item.styled';
+} from './task-deleted.styled';
 
-import { Check, Trash2 } from 'lucide-react';
+import { Undo, Trash2 } from 'lucide-react';
 
 import { useCallback } from 'react';
 
-export const TaskItem = (props: TaskItemProps) => {
-  const { task, handleDoneButtonClick, handleOnItemClick, handleRemoveClick } =
+export const TaskDeleted = (props: TaskDeletedProps) => {
+  const { task, handleRestoreClick, handleOnItemClick, handleRemoveClick } =
     props;
 
   const onContainerClick = useCallback(
@@ -25,10 +25,10 @@ export const TaskItem = (props: TaskItemProps) => {
     []
   );
 
-  const onDoneButtonClick = useCallback(
+  const onRestoreButtonClick = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
-      handleDoneButtonClick(task.id || 0);
+      handleRestoreClick(task.id || 0);
     },
     []
   );
@@ -48,7 +48,10 @@ export const TaskItem = (props: TaskItemProps) => {
         <TaskItemDescription text={props.task.description} />
       </TaskItemTitleDescription>
       <TaskItemActions>
-        <TaskItemDoneIconButton onClick={onDoneButtonClick} icon={<Check />} />
+        <TaskItemRestoreIconButton
+          onClick={onRestoreButtonClick}
+          icon={<Undo />}
+        />
         <TaskItemRemoveIconButton
           onClick={onRemoveButtonClick}
           icon={<Trash2 />}

@@ -1,38 +1,31 @@
 import {
-  ItemsDeletedAddButton,
   ItemsDeletedContainer,
   ItemsDeletedDivider,
-  ItemsDeletedIconInput,
   ItemsDeletedList,
-  ItemsDeletedSearchAndAdd,
   ItemsDeletedTitle,
 } from './items-deleted.styled';
 
-import { Search } from 'lucide-react';
-import { TaskItem } from '../../../../molecules';
 import { useItemsDeleted } from './items-deleted.hook';
-import { useModalProvider, useStorageProvider } from '../../../../../providers';
+import { useStorageProvider } from '../../../../../providers';
 import { useCallback } from 'react';
-import { AddTaskModal } from '../../../Modal/views/AddTask';
-import { Task } from '../../../../../common';
+import { TaskDeleted } from '../../../../molecules/tasks/TaskDeleted';
 
 export const ItemsDeleted = () => {
-  const { openModal, closeModal } = useModalProvider();
-  const { tasks, saveTask, deleteTask, markTaskAsDone } = useStorageProvider();
+  const { tasks, deleteTask, markTaskAsTodo } = useStorageProvider();
 
   const handleOnItemClick = useCallback((id: number) => {
     console.log('handleOnItemClick', id);
   }, []);
 
-  const handleDoneButtonClick = useCallback((id: number) => {
-    markTaskAsDone(id);
+  const handleRestoreClick = useCallback((id: number) => {
+    markTaskAsTodo(id);
   }, []);
 
   const handleRemoveClick = useCallback((id: number) => {
     deleteTask(id);
   }, []);
 
-  const { filteredTasks, handleSearchInputChange } = useItemsDeleted(tasks);
+  const { filteredTasks } = useItemsDeleted(tasks);
 
   return (
     <ItemsDeletedContainer>
@@ -40,11 +33,11 @@ export const ItemsDeleted = () => {
       <ItemsDeletedDivider />
       <ItemsDeletedList>
         {filteredTasks.map((task) => (
-          <TaskItem
+          <TaskDeleted
             key={task.id}
             task={task}
-            handleDoneButtonClick={handleDoneButtonClick}
             handleOnItemClick={handleOnItemClick}
+            handleRestoreClick={handleRestoreClick}
             handleRemoveClick={handleRemoveClick}
           />
         ))}

@@ -1,11 +1,11 @@
 import { useReducer } from 'react';
-import { Task, Theme } from '../../common';
+import { Task, TaskStatus, Theme } from '../../common';
 import { ProviderProps } from '../Common';
 import {
   getLocalStorageItem,
   LocalStorageItem,
   setLocalStorageItem,
-} from './local-storage';
+} from './local-storage-helpers';
 import {
   LocalStorageInitialState,
   LocalStorageReducer,
@@ -35,7 +35,7 @@ export const StorageProvider = ({ children }: ProviderProps) => {
 
   const saveTask = (task: Task) => {
     task.id = new Date().getTime();
-    task.isDone = false;
+    task.status = TaskStatus.Todo;
     const tasks = [...state.tasks, task];
     dispatch({ type: 'updateTasks', value: tasks });
     setLocalStorageItem(LocalStorageItem.Tasks, tasks);
@@ -54,6 +54,17 @@ export const StorageProvider = ({ children }: ProviderProps) => {
 
   const deleteTask = (id: number) => {
     const tasks = state.tasks.filter((item) => item.id !== id);
+    dispatch({ type: 'updateTasks', value: tasks });
+    setLocalStorageItem(LocalStorageItem.Tasks, tasks);
+  };
+
+  const markTaskAsDeleted = (id: number) => {
+    const tasks = state.tasks.map((item) => {
+      if (item.id === id) {
+        return { ...item, status: TaskStatus.Deleted };
+      }
+      return item;
+    });
 
     dispatch({ type: 'updateTasks', value: tasks });
     setLocalStorageItem(LocalStorageItem.Tasks, tasks);
@@ -62,9 +73,19 @@ export const StorageProvider = ({ children }: ProviderProps) => {
   const markTaskAsDone = (id: number) => {
     const tasks = state.tasks.map((item) => {
       if (item.id === id) {
-        console.log('item:', item);
+        return { ...item, status: TaskStatus.Done };
+      }
+      return item;
+    });
 
-        return { ...item, isDone: true };
+    dispatch({ type: 'updateTasks', value: tasks });
+    setLocalStorageItem(LocalStorageItem.Tasks, tasks);
+  };
+
+  const markTaskAsTodo = (id: number) => {
+    const tasks = state.tasks.map((item) => {
+      if (item.id === id) {
+        return { ...item, status: TaskStatus.Todo };
       }
       return item;
     });
@@ -83,6 +104,8 @@ export const StorageProvider = ({ children }: ProviderProps) => {
         updateTask,
         deleteTask,
         markTaskAsDone,
+        markTaskAsDeleted,
+        markTaskAsTodo,
       }}
     >
       {children}
