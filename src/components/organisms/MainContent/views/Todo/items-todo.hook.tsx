@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { ItemsTodoProps } from './items-todo.interface';
+import { Task } from '../../../../../common';
 
-export const useItemsTodo = ({ tasks }: ItemsTodoProps) => {
+export const useItemsTodo = (tasks: Task[]) => {
   const [filteredTasks, setFilteredTasks] = useState(tasks);
   const handleSearchInputChange = (phrase: string) => {
     const filteredTasks = tasks.filter(

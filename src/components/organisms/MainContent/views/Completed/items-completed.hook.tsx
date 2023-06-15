@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { ItemsCompletedProps } from './items-completed.interface';
+import { Task } from '../../../../../common';
 
-export const useItemsCompleted = ({ tasks }: ItemsCompletedProps) => {
+export const useItemsCompleted = (tasks: Task[]) => {
   const [filteredTasks, setFilteredTasks] = useState(tasks);
   const handleSearchInputChange = (phrase: string) => {
     const filteredTasks = tasks.filter(

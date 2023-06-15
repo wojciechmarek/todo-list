@@ -10,18 +10,47 @@ import {
 
 import { Search } from 'lucide-react';
 import { TaskItem } from '../../../../molecules';
-import { ItemsTodoProps } from './items-todo.interface';
 import { useItemsTodo } from './items-todo.hook';
+import { useModalProvider, useStorageProvider } from '../../../../../providers';
+import { useCallback } from 'react';
+import { AddTaskModal } from '../../../Modal/views/AddTask';
+import { Task } from '../../../../../common';
 
-export const ItemsTodo = (props: ItemsTodoProps) => {
-  const {
-    handleAddTaskModalClick,
-    handleDoneButtonClick,
-    handleOnItemClick,
-    handleRemoveClick,
-  } = props;
+export const ItemsTodo = () => {
+  const { openModal, closeModal } = useModalProvider();
+  const { tasks, saveTask, deleteTask, markTaskAsDone } = useStorageProvider();
 
-  const { filteredTasks, handleSearchInputChange } = useItemsTodo(props);
+  const handleAddTaskModalClick = useCallback(() => {
+    openModal(
+      <AddTaskModal
+        handleCancelButtonClick={handleCancelButtonClick}
+        handleSaveButtonClick={handleSaveButtonClick}
+      />
+    );
+  }, []);
+
+  const handleOnItemClick = useCallback((id: number) => {
+    console.log('handleOnItemClick', id);
+  }, []);
+
+  const handleDoneButtonClick = useCallback((id: number) => {
+    markTaskAsDone(id);
+  }, []);
+
+  const handleRemoveClick = useCallback((id: number) => {
+    deleteTask(id);
+  }, []);
+
+  const handleCancelButtonClick = () => {
+    closeModal();
+  };
+
+  const handleSaveButtonClick = (data: Task) => {
+    saveTask(data);
+    closeModal();
+  };
+
+  const { filteredTasks, handleSearchInputChange } = useItemsTodo(tasks);
 
   return (
     <ItemsTodoContainer>

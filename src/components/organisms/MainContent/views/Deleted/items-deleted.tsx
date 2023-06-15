@@ -10,18 +10,29 @@ import {
 
 import { Search } from 'lucide-react';
 import { TaskItem } from '../../../../molecules';
-import { ItemsDeletedProps } from './items-deleted.interface';
 import { useItemsDeleted } from './items-deleted.hook';
+import { useModalProvider, useStorageProvider } from '../../../../../providers';
+import { useCallback } from 'react';
+import { AddTaskModal } from '../../../Modal/views/AddTask';
+import { Task } from '../../../../../common';
 
-export const ItemsDeleted = (props: ItemsDeletedProps) => {
-  const {
-    handleAddTaskModalClick,
-    handleDoneButtonClick,
-    handleOnItemClick,
-    handleRemoveClick,
-  } = props;
+export const ItemsDeleted = () => {
+  const { openModal, closeModal } = useModalProvider();
+  const { tasks, saveTask, deleteTask, markTaskAsDone } = useStorageProvider();
 
-  const { filteredTasks, handleSearchInputChange } = useItemsDeleted(props);
+  const handleOnItemClick = useCallback((id: number) => {
+    console.log('handleOnItemClick', id);
+  }, []);
+
+  const handleDoneButtonClick = useCallback((id: number) => {
+    markTaskAsDone(id);
+  }, []);
+
+  const handleRemoveClick = useCallback((id: number) => {
+    deleteTask(id);
+  }, []);
+
+  const { filteredTasks, handleSearchInputChange } = useItemsDeleted(tasks);
 
   return (
     <ItemsDeletedContainer>

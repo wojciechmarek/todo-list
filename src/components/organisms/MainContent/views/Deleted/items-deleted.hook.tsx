@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { ItemsDeletedProps } from './items-deleted.interface';
+import { Task } from '../../../../../common';
 
-export const useItemsDeleted = ({ tasks }: ItemsDeletedProps) => {
+export const useItemsDeleted = (tasks: Task[]) => {
   const [filteredTasks, setFilteredTasks] = useState(tasks);
   const handleSearchInputChange = (phrase: string) => {
     const filteredTasks = tasks.filter(
