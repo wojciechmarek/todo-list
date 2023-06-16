@@ -2,7 +2,9 @@ import { Task, Theme } from '../../common';
 
 export interface StorageProps {
   theme: Theme;
-  tasks: Task[];
+  tasksTodo: Task[];
+  tasksDone: Task[];
+  tasksDeleted: Task[];
   saveTheme: (theme: Theme) => void;
   saveTask: (task: Task) => void;
   updateTask: (id: number, task: Task) => void;

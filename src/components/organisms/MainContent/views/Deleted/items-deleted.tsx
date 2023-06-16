@@ -5,13 +5,12 @@ import {
   ItemsDeletedTitle,
 } from './items-deleted.styled';
 
-import { useItemsDeleted } from './items-deleted.hook';
 import { useStorageProvider } from '../../../../../providers';
 import { useCallback } from 'react';
 import { TaskDeleted } from '../../../../molecules/tasks/TaskDeleted';
 
 export const ItemsDeleted = () => {
-  const { tasks, deleteTask, markTaskAsTodo } = useStorageProvider();
+  const { tasksDeleted, deleteTask, markTaskAsTodo } = useStorageProvider();
 
   const handleOnItemClick = useCallback((id: number) => {
     console.log('handleOnItemClick', id);
@@ -25,14 +24,12 @@ export const ItemsDeleted = () => {
     deleteTask(id);
   }, []);
 
-  const { filteredTasks } = useItemsDeleted(tasks);
-
   return (
     <ItemsDeletedContainer>
       <ItemsDeletedTitle title="Things deleted:" />
       <ItemsDeletedDivider />
       <ItemsDeletedList>
-        {filteredTasks.map((task) => (
+        {tasksDeleted.map((task) => (
           <TaskDeleted
             key={task.id}
             task={task}

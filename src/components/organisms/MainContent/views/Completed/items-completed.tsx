@@ -5,13 +5,12 @@ import {
   ItemsCompletedTitle,
 } from './items-completed.styled';
 
-import { useItemsCompleted } from './items-completed.hook';
 import { useStorageProvider } from '../../../../../providers';
 import { useCallback } from 'react';
 import { TaskCompleted } from '../../../../molecules/tasks/TaskCompleted';
 
 export const ItemsCompleted = () => {
-  const { tasks, deleteTask, markTaskAsTodo } = useStorageProvider();
+  const { tasksDone, deleteTask, markTaskAsTodo } = useStorageProvider();
 
   const handleOnItemClick = useCallback((id: number) => {
     console.log('handleOnItemClick', id);
@@ -25,14 +24,12 @@ export const ItemsCompleted = () => {
     deleteTask(id);
   }, []);
 
-  const { filteredTasks } = useItemsCompleted(tasks);
-
   return (
     <ItemsCompletedContainer>
       <ItemsCompletedTitle title="Things done:" />
       <ItemsCompletedDivider />
       <ItemsCompletedList>
-        {filteredTasks.map((task) => (
+        {tasksDone.map((task) => (
           <TaskCompleted
             key={task.id}
             task={task}

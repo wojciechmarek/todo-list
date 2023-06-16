@@ -18,7 +18,7 @@ import { TaskTodo } from '../../../../molecules';
 
 export const ItemsTodo = () => {
   const { openModal, closeModal } = useModalProvider();
-  const { tasks, saveTask, markTaskAsDeleted, markTaskAsDone } =
+  const { tasksTodo, saveTask, markTaskAsDeleted, markTaskAsDone } =
     useStorageProvider();
 
   const handleAddTaskModalClick = useCallback(() => {
@@ -51,7 +51,7 @@ export const ItemsTodo = () => {
     closeModal();
   };
 
-  const { filteredTasks, handleSearchInputChange } = useItemsTodo(tasks);
+  const { filteredTasks, handleSearchInputChange } = useItemsTodo(tasksTodo);
 
   return (
     <ItemsTodoContainer>

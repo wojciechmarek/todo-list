@@ -98,7 +98,15 @@ export const StorageProvider = ({ children }: ProviderProps) => {
     <StorageContext.Provider
       value={{
         theme: state.theme,
-        tasks: state.tasks,
+        tasksTodo: state.tasks.filter(
+          (task) => task.status === TaskStatus.Todo
+        ),
+        tasksDone: state.tasks.filter(
+          (task) => task.status === TaskStatus.Todo
+        ),
+        tasksDeleted: state.tasks.filter(
+          (task) => task.status === TaskStatus.Deleted
+        ),
         saveTheme,
         saveTask,
         updateTask,
