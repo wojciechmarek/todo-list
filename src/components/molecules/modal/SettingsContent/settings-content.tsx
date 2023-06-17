@@ -67,6 +67,11 @@ export const ModalSettingsContent = ({
         text="VFD Display"
         handleThemeClick={() => handleClick(Theme.VfdDisplay)}
       />
+      <ImageTile
+        isActive={currentTheme === Theme.Crt}
+        text="CRT"
+        handleThemeClick={() => handleClick(Theme.Crt)}
+      />
     </SettingsContainer>
   );
 };

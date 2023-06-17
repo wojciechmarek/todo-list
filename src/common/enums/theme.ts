@@ -9,4 +9,5 @@ export const enum Theme {
   Neumorphism = 'neumorphism',
   Aurora = 'aurora',
   VfdDisplay = 'vfd-display',
+  Crt = 'crt',
 }
