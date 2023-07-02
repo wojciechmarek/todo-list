@@ -35,3 +35,12 @@
   --standard-border: 1px solid #1caeae;
   --backdrop-filter: 0;
 }
+
+@font-face {
+  font-family: Minecraft;
+  src: url('../../assets/fonts/Minecraft.ttf');
+}
+
+div[data-theme='vfd-display'] {
+  font-family: Minecraft;
+}

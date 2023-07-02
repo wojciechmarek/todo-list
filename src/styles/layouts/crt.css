@@ -71,8 +71,14 @@ div[data-theme='crt']::after {
   animation: flicker 0.15s infinite;
 }
 
+@font-face {
+  font-family: Teletext;
+  src: url('../../assets/fonts/EuropeanTeletext.ttf');
+}
+
 div[data-theme='crt'] {
   animation: textShadow 1.6s infinite;
+  font-family: Teletext;
 }
 
 @keyframes flicker {

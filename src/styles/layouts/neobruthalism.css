@@ -33,3 +33,12 @@
   --standard-border: 1px solid black;
   --backdrop-filter: 0;
 }
+
+@font-face {
+  font-family: Neo;
+  src: url('../../assets/fonts/NeoBold.otf');
+}
+
+div[data-theme='neobruthalism'] {
+  font-family: Neo;
+}

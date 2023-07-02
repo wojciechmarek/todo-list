@@ -28,16 +28,25 @@
 
   /* --------- */
 
-  --modal-box-shadow: 4px 4px 10px #ffffff10, inset -8px -8px 16px #00000050,
+  --modal-box-shadow: 4px 4px 10px #00000020, inset -8px -8px 16px #00000050,
     inset 8px 8px 16px #ffffff40;
 
-  --container-box-shadow: 4px 4px 10px #ffffff10, inset -8px -8px 16px #00000050,
+  --container-box-shadow: 4px 4px 10px #00000010, inset -8px -8px 16px #00000050,
     inset 8px 8px 16px #ffffff40;
 
-  --button-box-shadow: 1px 1px 10px #ffffff30, inset -2px -2px 10px #00000090,
+  --button-box-shadow: 3px 3px 7px #00000030, inset -2px -2px 10px #00000090,
     inset 2px 2px 10px #ffffffb0;
 
   --standard-border-radius: 20px;
   --standard-border: 0;
   --backdrop-filter: blur(5px);
+}
+
+@font-face {
+  font-family: Fredoka;
+  src: url('../../assets/fonts/Fredoka.ttf');
+}
+
+div[data-theme='claymorphism'] {
+  font-family: Fredoka;
 }
