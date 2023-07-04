@@ -25,6 +25,7 @@ All design styles are written from scratch. This application does not use any UI
 - Neumorphism
 - Aurora (the dark theme with some subtle vector graphics in the background)
 - VFD Display (the dark theme with a retro VFD display glowing effect)
+- CRT (the old-school cathode ray tube monitor effect)
 
 ## Screenshots
 
