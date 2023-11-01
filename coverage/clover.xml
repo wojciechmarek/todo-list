@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698824821545" clover="3.2.0">
-  <project timestamp="1698824821545" name="All files">
+<coverage generated="1698833304643" clover="3.2.0">
+  <project timestamp="1698833304643" name="All files">
     <metrics statements="120" coveredstatements="0" conditionals="329" coveredconditionals="0" methods="54" coveredmethods="0" elements="503" coveredelements="0" complexity="0" loc="120" ncloc="120" packages="1" files="3" classes="3"/>
     <file name="block-navigation.js" path="/Users/wojciechmarek/Desktop/todo-list/coverage/lcov-report/block-navigation.js">
       <metrics statements="30" coveredstatements="0" conditionals="19" coveredconditionals="0" methods="6" coveredmethods="0"/>

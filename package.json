@@ -11,8 +11,6 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "test": "jest --env=jsdom",
     "prettier": "prettier --write ."
   },
