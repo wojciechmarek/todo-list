@@ -36,7 +36,6 @@ import {
 import { SettingsModal } from '../Modal/views/Settings';
 import { useEffect } from 'react';
 import { Theme } from '../../../common';
-import { Link, Routes } from 'react-router-dom';
 
 export const Navbar = () => {
   const { isExpanded, toggleExpand } = useNavbar();
