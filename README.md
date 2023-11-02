@@ -39,12 +39,9 @@ All design styles are written from scratch. This application does not use any UI
 - 🧪 **Testing:** jest, react-testing-library
 - 💎 **Others:** desktop-first approach, atomic design, progressive web app, docker and dev container
 
-## Storybook
+## Tests
 
-To see all components in isolation:
-
-1. Run `yarn storybook` in the root directory.
-2. Open `http://localhost:6006` in your browser.
+The project contains component tests for all dump (atom/molecule/organism) components. To run the tests, type and run: `yarn test` in the root directory.
 
 ## How to run
 

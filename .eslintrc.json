@@ -1,14 +1,17 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:sonarjs/recommended",
+    "prettier"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -16,6 +19,28 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "plugins": ["react", "@typescript-eslint", "jest"],
+  "rules": {
+    "semi": ["error", "warn"],
+    "no-tabs": "error",
+    "quotes": ["error", "warn"],
+    "no-console": "error",
+    "no-debugger": "error",
+    "no-alert": "error",
+    "no-unused-vars": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-irregular-whitespace": "warn",
+    "no-trailing-spaces": "warn",
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": false,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": false
+      }
+    ]
+  }
 }
