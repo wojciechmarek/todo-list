@@ -11,8 +11,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "test": "jest --env=jsdom",
-    "test-watch": "jest --env=jsdom --watch",
+    "test": "jest",
+    "test-watch": "jest --watch",
     "prettier": "prettier --write ."
   },
   "dependencies": {
