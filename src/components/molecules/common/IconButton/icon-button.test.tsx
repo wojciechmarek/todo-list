@@ -1,7 +1,48 @@
+import { configure, render } from '@testing-library/react';
+import { IconButton } from './icon-button';
+import { IconButtonProps } from './icon-button.interface';
+import '@testing-library/jest-dom';
+
 describe('IconButton', () => {
-  it('should render', () => {
-    expect(true).toBeTruthy();
+  let iconButtonProps: IconButtonProps;
+
+  beforeEach(() => {
+    configure({ throwSuggestions: true });
+
+    iconButtonProps = {
+      icon: <img src="https://via.placeholder.com/150" alt="icon" />,
+      onClick: jest.fn(),
+    };
   });
 
-  describe('when the button is clicked', () => {});
+  it('should render', () => {
+    const { baseElement } = render(<IconButton {...iconButtonProps} />);
+    expect(baseElement).toBeTruthy();
+  });
+
+  describe('when the icon button is rendered', () => {
+    it('should render the icon', () => {
+      const { getByRole } = render(<IconButton {...iconButtonProps} />);
+      const image = getByRole('img', { name: /icon/i });
+      expect(image).toBeTruthy();
+    });
+  });
+
+  describe('when the icon button is clicked', () => {
+    it('should call the onClick function', () => {
+      const { getByRole } = render(<IconButton {...iconButtonProps} />);
+      const button = getByRole('button', { name: /icon/i });
+      button.click();
+      expect(iconButtonProps.onClick).toHaveBeenCalled();
+    });
+
+    it('should not call the onClick function when the button is disabled', () => {
+      const { getByRole } = render(
+        <IconButton {...iconButtonProps} disabled />
+      );
+      const button = getByRole('button', { name: /icon/i });
+      button.click();
+      expect(iconButtonProps.onClick).not.toHaveBeenCalled();
+    });
+  });
 });

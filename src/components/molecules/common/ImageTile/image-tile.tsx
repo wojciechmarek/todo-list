@@ -7,7 +7,11 @@ export const ImageTile = ({
   handleThemeClick,
 }: ImageTileProps) => {
   return (
-    <ImageTileContainer isActive={isActive} onClick={handleThemeClick}>
+    <ImageTileContainer
+      isActive={isActive}
+      onClick={handleThemeClick}
+      data-testid="tile"
+    >
       {text}
     </ImageTileContainer>
   );

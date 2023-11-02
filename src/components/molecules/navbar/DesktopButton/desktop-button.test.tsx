@@ -1,7 +1,56 @@
-describe('DesktopButton', () => {
-  it('should render', () => {
-    expect(true).toBeTruthy();
+import { configure, render } from '@testing-library/react';
+import { DesktopNavbarButtonProps } from './desktop-button.interface';
+import { DesktopNavbarButton } from './desktop-button';
+import '@testing-library/jest-dom';
+import { MemoryRouter } from 'react-router-dom';
+
+describe('DesktopNavbarButton', () => {
+  let desktopNavbarButtonProps: DesktopNavbarButtonProps;
+
+  beforeEach(() => {
+    configure({ throwSuggestions: true });
+
+    desktopNavbarButtonProps = {
+      icon: <span>A</span>,
+      expanded: false,
+      name: 'Click me',
+      onClick: jest.fn(),
+    };
   });
 
-  describe('when the button is clicked', () => {});
+  it('should render', () => {
+    const { baseElement } = render(
+      <DesktopNavbarButton {...desktopNavbarButtonProps} />
+    );
+    expect(baseElement).toBeTruthy();
+  });
+
+  describe('when the desktop button is rendered', () => {
+    it('should render the icon', () => {
+      const { getByText } = render(
+        <DesktopNavbarButton {...desktopNavbarButtonProps} />
+      );
+      const icon = getByText(/A/i);
+      expect(icon).toBeTruthy();
+    });
+
+    it('should render the name', () => {
+      const { getByText } = render(
+        <DesktopNavbarButton {...desktopNavbarButtonProps} />
+      );
+      const name = getByText(/Click me/i);
+      expect(name).toBeTruthy();
+    });
+  });
+
+  describe('when the desktop button is clicked', () => {
+    it('should call the onClick function', () => {
+      const { getByText } = render(
+        <DesktopNavbarButton {...desktopNavbarButtonProps} />
+      );
+      const button = getByText(/Click me/i);
+      button.click();
+      expect(desktopNavbarButtonProps.onClick).toHaveBeenCalled();
+    });
+  });
 });
