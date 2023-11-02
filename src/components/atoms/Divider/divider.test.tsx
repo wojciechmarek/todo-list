@@ -1,7 +1,9 @@
+import { render } from '@testing-library/react';
+import { Divider } from './divider';
+
 describe('Divider', () => {
   it('should render', () => {
-    expect(true).toBeTruthy();
+    const { baseElement } = render(<Divider />);
+    expect(baseElement).toBeTruthy();
   });
-
-  describe('when the button is clicked', () => {});
 });

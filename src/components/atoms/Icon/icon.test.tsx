@@ -1,7 +1,20 @@
+import { configure, render } from '@testing-library/react';
+import { Icon } from './icon';
+import { IconProps } from './icon.interface';
+
 describe('Icon', () => {
-  it('should render', () => {
-    expect(true).toBeTruthy();
+  let iconProps: IconProps;
+
+  beforeEach(() => {
+    configure({ throwSuggestions: true });
+
+    iconProps = {
+      icon: 'icon',
+    };
   });
 
-  describe('when the button is clicked', () => {});
+  it('should render', () => {
+    const { baseElement } = render(<Icon {...iconProps} />);
+    expect(baseElement).toBeTruthy();
+  });
 });

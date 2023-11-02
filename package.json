@@ -12,6 +12,7 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "test": "jest --env=jsdom",
+    "test-watch": "jest --env=jsdom --watch",
     "prettier": "prettier --write ."
   },
   "dependencies": {
@@ -38,6 +39,7 @@
     "@storybook/react": "^7.0.21",
     "@storybook/react-vite": "^7.0.21",
     "@storybook/testing-library": "^0.2.2",
+    "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.1",

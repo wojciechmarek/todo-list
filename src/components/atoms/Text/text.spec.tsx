@@ -1,7 +1,29 @@
+import { configure, render } from '@testing-library/react';
+import { Text } from './text';
+import { TextProps } from './text.interface';
+import '@testing-library/jest-dom';
+
 describe('Text', () => {
-  it('should render', () => {
-    expect(true).toBeTruthy();
+  let textProps: TextProps;
+
+  beforeEach(() => {
+    configure({ throwSuggestions: true });
+
+    textProps = {
+      text: 'hello world',
+    };
   });
 
-  describe('when the button is clicked', () => {});
+  it('should render', () => {
+    const { baseElement } = render(<Text {...textProps} />);
+    expect(baseElement).toBeTruthy();
+  });
+
+  describe('when the text is rendered', () => {
+    it('should have the correct value', () => {
+      const { getByText } = render(<Text {...textProps} />);
+      const text = getByText('hello world');
+      expect(text).toBeInTheDocument();
+    });
+  });
 });

@@ -39,6 +39,10 @@ All design styles are written from scratch. This application does not use any UI
 - 🧪 **Testing:** jest, react-testing-library
 - 💎 **Others:** desktop-first approach, atomic design, progressive web app, docker and dev container
 
+## Tests
+
+The project contains component tests for all dump (atom/molecule/organism) components. To run the tests, type and run: `yarn test` in the root directory.
+
 ## How to run
 
 1. Install [Node.js](https://nodejs.org/en/download/).

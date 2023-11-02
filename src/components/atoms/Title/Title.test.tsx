@@ -1,7 +1,29 @@
+import { configure, render } from '@testing-library/react';
+import { Title } from './title';
+import { TitleProps } from './title.interface';
+import '@testing-library/jest-dom';
+
 describe('Title', () => {
-  it('should render', () => {
-    expect(true).toBeTruthy();
+  let titleProps: TitleProps;
+
+  beforeEach(() => {
+    configure({ throwSuggestions: true });
+
+    titleProps = {
+      title: 'hello title world',
+    };
   });
 
-  describe('when the button is clicked', () => {});
+  it('should render', () => {
+    const { baseElement } = render(<Title {...titleProps} />);
+    expect(baseElement).toBeTruthy();
+  });
+
+  describe('when the title is rendered', () => {
+    it('should have the correct value', () => {
+      const { getByRole } = render(<Title {...titleProps} />);
+      const title = getByRole('heading', { name: /hello title world/i });
+      expect(title).toBeInTheDocument();
+    });
+  });
 });
