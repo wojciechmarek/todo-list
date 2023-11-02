@@ -3,7 +3,7 @@ import { ModalActionButtons } from './action-buttons';
 import { ModalActionButtonsProps } from './action-buttons.interface';
 import '@testing-library/jest-dom';
 
-describe('IconButton', () => {
+describe('ActionButtons', () => {
   let modalActionButtonsProps: ModalActionButtonsProps;
 
   beforeEach(() => {
