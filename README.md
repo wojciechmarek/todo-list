@@ -39,11 +39,7 @@ All design styles are written from scratch. This application does not use any UI
 - 🧪 **Testing:** jest, react-testing-library
 - 💎 **Others:** desktop-first approach, atomic design, progressive web app, docker and dev container
 
-## Tests
-
-The project contains component tests for all dump (atom/molecule/organism) components. To run the tests, type and run: `yarn test` in the root directory.
-
-## How to run
+## How to run the app
 
 1. Install [Node.js](https://nodejs.org/en/download/).
 2. Install [Yarn](https://classic.yarnpkg.com/en/docs/install/).
@@ -53,3 +49,12 @@ The project contains component tests for all dump (atom/molecule/organism) compo
 6. Open `http://localhost:5173` in your browser to see the app.
 
 > The repository contains also the **dev container** configuration for Visual Studio Code. If you have the Remote - Containers extension installed, you can run the project in a container instead of installing all dependencies on your local machine.
+
+## Component tests
+
+The project contains component tests for all dump (atom/molecule/organism) components (88 tests in total). To run the tests, type and run: `yarn test` in the root directory.
+Report:
+
+<img width="617" alt="Screenshot 2023-11-03 at 15 35 25" src="https://github.com/wojciechmarek/todo-list/assets/27026036/6060fa65-987c-4947-a2bf-388f1dc96e68">
+
+
