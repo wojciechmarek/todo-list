@@ -39,6 +39,10 @@ All design styles are written from scratch. This application does not use any UI
 - 🧪 **Testing:** jest, react-testing-library
 - 💎 **Others:** desktop-first approach, atomic design, progressive web app, docker and dev container
 
+## Versioning
+
+This application uses conventional commits for generating changelog and versioning. The change log is available at [CHANGELOG.md](./CHANGELOG.md).
+
 ## How to run the app
 
 1. Install [Node.js](https://nodejs.org/en/download/).
