@@ -1,7 +1,7 @@
 {
   "name": "todo-list",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -13,7 +13,11 @@
     "prepare": "husky install",
     "test": "jest",
     "test-watch": "jest --watch",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "release": "standard-version",
+    "release:patch": "standard-version --release-as patch",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
   },
   "dependencies": {
     "@emotion/react": "^11.10.8",
@@ -64,6 +68,7 @@
     "prettier": "3.0.3",
     "prop-types": "^15.8.1",
     "react-test-renderer": "^18.2.0",
+    "standard-version": "^9.5.0",
     "storybook": "^7.0.21",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
