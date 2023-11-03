@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainContent should match the snapshot 1`] = `
+.emotion-0 {
+  height: 100%;
+  width: 100%;
+}
+
+.emotion-1 {
+  height: calc(100% - 2em);
+  width: 90%;
+  max-width: 860px;
+  margin: 0.75em auto;
+  border-radius: var(--standard-border-radius);
+  background-color: var(--nav-and-content-bg-color);
+  border: var(--standard-border);
+  box-shadow: var(--container-box-shadow);
+  -webkit-backdrop-filter: var(--backdrop-filter);
+  backdrop-filter: var(--backdrop-filter);
+}
+
+@media (max-width: 768px) {
+  .emotion-1 {
+    width: calc(100% - 2em);
+  }
+}
+
+.emotion-2 {
+  margin: 0 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-3 {
+  font-size: 2.75rem;
+  margin-top: 0.5em;
+  padding: 0;
+  font-weight: 900;
+  color: var(--text-font-color);
+  text-shadow: var(--text-box-shadow);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 3em;
+  margin-top: 1.5em;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: var(--standard-border-radius);
+  border: none;
+  height: 3em;
+  height: 100%;
+  width: calc((100% - (100% / 3)) - 0.5em);
+  box-shadow: var(--container-box-shadow);
+}
+
+.emotion-6 {
+  border: 1px solid var(--search-input-border-and-icon-bg-color);
+  background-color: var(--search-input-bg-color);
+  color: var(--input-font-color);
+  font-weight: 800;
+  padding-left: 1em;
+  border-radius: var(--standard-border-radius);
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  height: 100%;
+  width: 100%;
+  padding-right: 4em;
+  box-shadow: var(--button-box-shadow);
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: var(--text-font-color);
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.emotion-6::-moz-placeholder {
+  color: var(--text-font-color);
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: var(--text-font-color);
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.emotion-6::placeholder {
+  color: var(--text-font-color);
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.emotion-6:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  right: 0.5em;
+  height: 100%;
+  width: 3em;
+  border-radius: 0 var(--standard-border-radius);
+  box-sizing: border-box;
+  padding: 0.25em;
+}
+
+.emotion-7 svg {
+  stroke: var(--search-magnifier-color);
+}
+
+.emotion-8 {
+  height: calc(100% * 0.618);
+  width: calc(100% * 0.618);
+}
+
+.emotion-9 {
+  cursor: pointer;
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  background-color: var(--add-new-task-button-bg-color);
+  color: var(--button-font-color);
+  border-radius: var(--standard-border-radius);
+  height: 100%;
+  width: calc((100% / 3) - 0.5em);
+  font-weight: 900;
+  font-size: 1rem;
+  border: var(--standard-border);
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  box-shadow: var(--button-box-shadow);
+}
+
+.emotion-9:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+.emotion-9:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+.emotion-10 {
+  height: 1px;
+  box-shadow: var(--divider-box-shadow);
+  margin: 2em 0;
+  background-color: var(--divider-color);
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <h1
+        className="emotion-3"
+      >
+        Things to do:
+      </h1>
+      <div
+        className="emotion-4"
+      >
+        <div
+          className="emotion-5"
+        >
+          <input
+            className="emotion-6"
+            onChange={[Function]}
+            placeholder="Search"
+            value=""
+          />
+          <div
+            className="emotion-7"
+          >
+            <div
+              className="emotion-8"
+            >
+              <svg
+                className="lucide lucide-search"
+                fill="none"
+                height={24}
+                stroke="black"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                viewBox="0 0 24 24"
+                width={24}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="8"
+                />
+                <path
+                  d="m21 21-4.3-4.3"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <button
+          className="emotion-9"
+          onClick={[Function]}
+        >
+          New task
+        </button>
+      </div>
+      <div
+        className="emotion-10"
+      />
+      <div
+        className="emotion-11"
+      />
+    </div>
+  </div>
+</div>
+`;

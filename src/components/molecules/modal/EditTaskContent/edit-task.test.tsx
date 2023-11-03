@@ -5,6 +5,7 @@ import { Task, TaskStatus } from '../../../../common';
 import { ModalEditTaskContent } from './edit-task';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
+import TestRenderer from 'react-test-renderer';
 
 describe('EditTaskContent', () => {
   let modalEditTaskContentProps: ModalEditTaskContentProps;
@@ -36,6 +37,13 @@ describe('EditTaskContent', () => {
       <ModalEditTaskContent {...modalEditTaskContentProps} />
     );
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <ModalEditTaskContent {...modalEditTaskContentProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the edit task modal content is rendered', () => {

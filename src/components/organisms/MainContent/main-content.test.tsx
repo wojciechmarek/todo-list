@@ -7,6 +7,7 @@ import {
   StorageProvider,
   ThemeProvider,
 } from '../../../providers';
+import TestRenderer from 'react-test-renderer';
 
 describe('MainContent', () => {
   beforeEach(() => {
@@ -26,5 +27,20 @@ describe('MainContent', () => {
       </ThemeProvider>
     );
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <ThemeProvider>
+        <ModalProvider>
+          <StorageProvider>
+            <MemoryRouter>
+              <MainContent />
+            </MemoryRouter>
+          </StorageProvider>
+        </ModalProvider>
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

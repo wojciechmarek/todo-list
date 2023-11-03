@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton should match the snapshot 1`] = `
+.emotion-0 {
+  cursor: pointer;
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: none;
+}
+
+.emotion-0:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.emotion-2 {
+  height: calc(100% * 0.618);
+  width: calc(100% * 0.618);
+}
+
+<button
+  className="emotion-0"
+  onClick={[MockFunction]}
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <img
+        alt="icon"
+        src="https://via.placeholder.com/150"
+      />
+    </div>
+  </div>
+</button>
+`;

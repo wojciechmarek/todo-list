@@ -1,9 +1,8 @@
-import { act, configure, render } from '@testing-library/react';
+import { configure, render } from '@testing-library/react';
 import { ModalTitleBarProps } from './title-bar.interface';
-import { UseFormReturn, useForm } from 'react-hook-form';
 import { ModalTitleBar } from './title-bar';
 import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
+import TestRenderer from 'react-test-renderer';
 
 describe('TitleBar', () => {
   let modalTitleBarProps: ModalTitleBarProps;
@@ -20,6 +19,13 @@ describe('TitleBar', () => {
   it('should render', () => {
     const { baseElement } = render(<ModalTitleBar {...modalTitleBarProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <ModalTitleBar {...modalTitleBarProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the title bar is rendered', () => {

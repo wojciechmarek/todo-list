@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SettingsContent should match the snapshot 1`] = `
+.emotion-0 {
+  width: calc(100% - 4em);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: grid;
+  -webkit-column-gap: 0.1em;
+  column-gap: 0.1em;
+  margin: 2em;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: flex-start;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+.emotion-1 {
+  margin: 0.75em;
+  height: 5em;
+  width: 10em;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--theme-tile-button-bg-color);
+  border-radius: 0.5em;
+  color: var(--button-font-color);
+  font-weight: 800;
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--container-box-shadow);
+  cursor: pointer;
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  -webkit-filter: none;
+  filter: none;
+}
+
+.emotion-1:hover {
+  -webkit-filter: brightness(0.75);
+  filter: brightness(0.75);
+}
+
+.emotion-5 {
+  margin: 0.75em;
+  height: 5em;
+  width: 10em;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--theme-tile-button-bg-color);
+  border-radius: 0.5em;
+  color: var(--button-font-color);
+  font-weight: 800;
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--container-box-shadow);
+  cursor: pointer;
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+.emotion-5:hover {
+  -webkit-filter: brightness(0.75);
+  filter: brightness(0.75);
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Modern flat dark
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Modern flat light
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Bruthalism
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Neobruthalism
+  </div>
+  <div
+    className="emotion-5"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Cardboard
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Glassmorphism
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Claymorphism
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Neumorphism
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    Aurora
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    VFD Display
+  </div>
+  <div
+    className="emotion-1"
+    data-testid="tile"
+    onClick={[Function]}
+  >
+    CRT
+  </div>
+</div>
+`;

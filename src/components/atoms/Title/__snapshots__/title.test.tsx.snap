@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title should match the snapshot 1`] = `
+<h1
+  className="emotion-0"
+>
+  hello title world
+</h1>
+`;

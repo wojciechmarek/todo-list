@@ -3,6 +3,7 @@ import { Input } from './input';
 import { InputProps } from './input.interface';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
+import TestRenderer from 'react-test-renderer';
 
 describe('Input', () => {
   let inputProps: InputProps;
@@ -20,6 +21,11 @@ describe('Input', () => {
   it('should render', () => {
     const { baseElement } = render(<Input {...inputProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(<Input {...inputProps} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the input is rendered', () => {

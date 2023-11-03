@@ -2,6 +2,7 @@ import { configure, render } from '@testing-library/react';
 import { Title } from './title';
 import { TitleProps } from './title.interface';
 import '@testing-library/jest-dom';
+import TestRenderer from 'react-test-renderer';
 
 describe('Title', () => {
   let titleProps: TitleProps;
@@ -17,6 +18,11 @@ describe('Title', () => {
   it('should render', () => {
     const { baseElement } = render(<Title {...titleProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(<Title {...titleProps} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the title is rendered', () => {

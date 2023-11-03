@@ -2,6 +2,7 @@ import { configure, render } from '@testing-library/react';
 import { Text } from './text';
 import { TextProps } from './text.interface';
 import '@testing-library/jest-dom';
+import TestRenderer from 'react-test-renderer';
 
 describe('Text', () => {
   let textProps: TextProps;
@@ -17,6 +18,11 @@ describe('Text', () => {
   it('should render', () => {
     const { baseElement } = render(<Text {...textProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(<Text {...textProps} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the text is rendered', () => {

@@ -3,6 +3,7 @@ import { CommonLinkProps } from './common-link.interface';
 import { CommonLink } from './common-link';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
+import TestRenderer from 'react-test-renderer';
 
 describe('CommonLink', () => {
   let commonLinkProps: CommonLinkProps;
@@ -26,6 +27,15 @@ describe('CommonLink', () => {
       </MemoryRouter>
     );
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <MemoryRouter>
+        <CommonLink {...commonLinkProps} />
+      </MemoryRouter>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the common link is rendered', () => {

@@ -3,6 +3,7 @@ import { TaskTodoProps } from './task-todo.interface';
 import { TaskTodo } from './task-todo';
 import '@testing-library/jest-dom';
 import { TaskStatus } from '../../../../common';
+import TestRenderer from 'react-test-renderer';
 
 describe('TaskTodo', () => {
   let taskTodoProps: TaskTodoProps;
@@ -27,6 +28,11 @@ describe('TaskTodo', () => {
   it('should render', () => {
     const { baseElement } = render(<TaskTodo {...taskTodoProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(<TaskTodo {...taskTodoProps} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the task completed is rendered', () => {

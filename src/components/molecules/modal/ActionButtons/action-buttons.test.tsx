@@ -2,6 +2,7 @@ import { configure, render } from '@testing-library/react';
 import { ModalActionButtons } from './action-buttons';
 import { ModalActionButtonsProps } from './action-buttons.interface';
 import '@testing-library/jest-dom';
+import TestRenderer from 'react-test-renderer';
 
 describe('ActionButtons', () => {
   let modalActionButtonsProps: ModalActionButtonsProps;
@@ -24,6 +25,13 @@ describe('ActionButtons', () => {
       <ModalActionButtons {...modalActionButtonsProps} />
     );
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <ModalActionButtons {...modalActionButtonsProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the modal action buttons are rendered', () => {
