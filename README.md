@@ -52,9 +52,7 @@ All design styles are written from scratch. This application does not use any UI
 
 ## Component tests
 
-The project contains component tests for all dump (atom/molecule/organism) components (88 tests in total). To run the tests, type and run: `yarn test` in the root directory.
+The project contains component tests for all dump (atom/molecule/organism) components (111 tests in total including 23 snapshot tests). To run the tests, type and run: `yarn test` in the root directory.
 Report:
 
-<img width="617" alt="Screenshot 2023-11-03 at 15 35 25" src="https://github.com/wojciechmarek/todo-list/assets/27026036/6060fa65-987c-4947-a2bf-388f1dc96e68">
-
-
+<img width="670" alt="Screenshot 2023-11-03 at 16 29 35" src="https://github.com/wojciechmarek/todo-list/assets/27026036/502adcaf-e9e3-4409-b202-f0d473769410">
