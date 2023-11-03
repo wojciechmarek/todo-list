@@ -3,6 +3,7 @@ import { IconInput } from './icon-input';
 import { IconInputProps } from './icon-input.interface';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import TestRenderer from 'react-test-renderer';
 
 describe('IconButton', () => {
   let iconInputProps: IconInputProps;
@@ -21,6 +22,13 @@ describe('IconButton', () => {
   it('should render', () => {
     const { baseElement } = render(<IconInput {...iconInputProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <IconInput {...iconInputProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the icon input is rendered', () => {

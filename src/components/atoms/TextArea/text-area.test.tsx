@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import { configure, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { TextArea } from './text-area';
+import TestRenderer from 'react-test-renderer';
 
 describe('TextArea', () => {
   let textAreaProps: TextAreaProps;
@@ -20,6 +21,11 @@ describe('TextArea', () => {
   it('should render', () => {
     const { baseElement } = render(<TextArea {...textAreaProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(<TextArea {...textAreaProps} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the text area is rendered', () => {

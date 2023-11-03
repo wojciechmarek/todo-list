@@ -3,6 +3,7 @@ import { TaskDeletedProps } from './task-deleted.interface';
 import { TaskDeleted } from './task-deleted';
 import '@testing-library/jest-dom';
 import { TaskStatus } from '../../../../common';
+import TestRenderer from 'react-test-renderer';
 
 describe('DesktopNavbarButton', () => {
   let taskDeletedProps: TaskDeletedProps;
@@ -27,6 +28,13 @@ describe('DesktopNavbarButton', () => {
   it('should render', () => {
     const { baseElement } = render(<TaskDeleted {...taskDeletedProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <TaskDeleted {...taskDeletedProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the task completed is rendered', () => {

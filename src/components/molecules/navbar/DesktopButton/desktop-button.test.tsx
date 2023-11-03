@@ -2,7 +2,7 @@ import { configure, render } from '@testing-library/react';
 import { DesktopNavbarButtonProps } from './desktop-button.interface';
 import { DesktopNavbarButton } from './desktop-button';
 import '@testing-library/jest-dom';
-import { MemoryRouter } from 'react-router-dom';
+import TestRenderer from 'react-test-renderer';
 
 describe('DesktopNavbarButton', () => {
   let desktopNavbarButtonProps: DesktopNavbarButtonProps;
@@ -23,6 +23,13 @@ describe('DesktopNavbarButton', () => {
       <DesktopNavbarButton {...desktopNavbarButtonProps} />
     );
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <DesktopNavbarButton {...desktopNavbarButtonProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the desktop button is rendered', () => {

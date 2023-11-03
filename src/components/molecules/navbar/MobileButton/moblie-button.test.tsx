@@ -2,6 +2,7 @@ import { configure, render } from '@testing-library/react';
 import { MobileNavbarButtonProps } from './mobile-button.interface';
 import { MobileNavbarButton } from './mobile-button';
 import '@testing-library/jest-dom';
+import TestRenderer from 'react-test-renderer';
 
 describe('DesktopNavbarButton', () => {
   let mobileNavbarButtonProps: MobileNavbarButtonProps;
@@ -22,6 +23,13 @@ describe('DesktopNavbarButton', () => {
       <MobileNavbarButton {...mobileNavbarButtonProps} />
     );
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <MobileNavbarButton {...mobileNavbarButtonProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the desktop button is rendered', () => {

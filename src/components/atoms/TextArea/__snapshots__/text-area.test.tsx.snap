@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea should match the snapshot 1`] = `
+.emotion-0 {
+  border: 1px solid var(--search-input-border-and-icon-bg-color);
+  background-color: var(--search-input-bg-color);
+  color: var(--text-font-color);
+  font-weight: 800;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  border-radius: var(--standard-border-radius);
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: var(--text-font-color);
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.emotion-0::-moz-placeholder {
+  color: var(--text-font-color);
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: var(--text-font-color);
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.emotion-0::placeholder {
+  color: var(--text-font-color);
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.emotion-0:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+<textarea
+  className="emotion-0"
+  onChange={[Function]}
+  placeholder="placeholder test for textarea"
+  value="hello textarea"
+/>
+`;

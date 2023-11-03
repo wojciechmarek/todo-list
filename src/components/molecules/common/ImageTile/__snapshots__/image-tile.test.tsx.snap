@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageTile should match the snapshot 1`] = `
+.emotion-0 {
+  margin: 0.75em;
+  height: 5em;
+  width: 10em;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--theme-tile-button-bg-color);
+  border-radius: 0.5em;
+  color: var(--button-font-color);
+  font-weight: 800;
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--container-box-shadow);
+  cursor: pointer;
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  -webkit-filter: none;
+  filter: none;
+}
+
+.emotion-0:hover {
+  -webkit-filter: brightness(0.75);
+  filter: brightness(0.75);
+}
+
+<div
+  className="emotion-0"
+  data-testid="tile"
+  onClick={[MockFunction]}
+>
+  text
+</div>
+`;

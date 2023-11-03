@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider should match the snapshot 1`] = `
+.emotion-0 {
+  height: 1px;
+  box-shadow: var(--divider-box-shadow);
+}
+
+<div
+  className="emotion-0"
+/>
+`;

@@ -1,10 +1,9 @@
-import { act, configure, render, renderHook } from '@testing-library/react';
+import { act, configure, render } from '@testing-library/react';
 import { ModalSettingsContentProps } from './settings-content.interface';
-import { UseFormReturn, useForm } from 'react-hook-form';
-import { Task, TaskStatus, Theme } from '../../../../common';
+import { Theme } from '../../../../common';
 import { ModalSettingsContent } from './settings-content';
 import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
+import TestRenderer from 'react-test-renderer';
 
 describe('SettingsContent', () => {
   let modalSettingsContentProps: ModalSettingsContentProps;
@@ -23,6 +22,13 @@ describe('SettingsContent', () => {
       <ModalSettingsContent {...modalSettingsContentProps} />
     );
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <ModalSettingsContent {...modalSettingsContentProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the edit settings modal content is rendered', () => {

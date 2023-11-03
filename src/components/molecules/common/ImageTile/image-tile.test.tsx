@@ -1,6 +1,7 @@
 import { configure, render } from '@testing-library/react';
 import { ImageTileProps } from './image-tile.interface';
 import { ImageTile } from './image-tile';
+import TestRenderer from 'react-test-renderer';
 
 describe('ImageTile', () => {
   let imageTileProps: ImageTileProps;
@@ -20,5 +21,12 @@ describe('ImageTile', () => {
   it('should render', () => {
     const { baseElement } = render(<ImageTile {...imageTileProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <ImageTile {...imageTileProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

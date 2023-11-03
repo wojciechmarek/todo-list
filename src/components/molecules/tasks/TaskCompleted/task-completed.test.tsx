@@ -3,6 +3,7 @@ import { TaskCompletedProps } from './task-completed.interface';
 import { TaskCompleted } from './task-completed';
 import '@testing-library/jest-dom';
 import { TaskStatus } from '../../../../common';
+import TestRenderer from 'react-test-renderer';
 
 describe('TaskCompleted', () => {
   let taskCompletedProps: TaskCompletedProps;
@@ -26,6 +27,13 @@ describe('TaskCompleted', () => {
   it('should render', () => {
     const { baseElement } = render(<TaskCompleted {...taskCompletedProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(
+      <TaskCompleted {...taskCompletedProps} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the task completed is rendered', () => {

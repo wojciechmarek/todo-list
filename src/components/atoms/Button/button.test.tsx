@@ -2,6 +2,7 @@ import { configure, render } from '@testing-library/react';
 import { ButtonProps } from './button.interface';
 import { Button } from './button';
 import '@testing-library/jest-dom';
+import TestRenderer from 'react-test-renderer';
 
 describe('Button', () => {
   let buttonProps: ButtonProps;
@@ -18,6 +19,11 @@ describe('Button', () => {
   it('should render', () => {
     const { baseElement } = render(<Button {...buttonProps} />);
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should match the snapshot', () => {
+    const tree = TestRenderer.create(<Button {...buttonProps} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   describe('when the button is rendered', () => {

@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleBar should match the snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 2em 2em 0 2em;
+  width: calc(100% - 4em);
+}
+
+.emotion-1 {
+  font-size: 1.5em;
+  color: var(--text-font-color);
+  font-weight: 900;
+  text-shadow: var(--text-box-shadow);
+  cursor: default;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: none;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 0.45em;
+  background-color: var(--modal-cross-button-bg-color);
+  color: var(--button-font-color);
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--button-box-shadow);
+}
+
+.emotion-2:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+.emotion-2:hover {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.emotion-4 {
+  height: calc(100% * 0.618);
+  width: calc(100% * 0.618);
+}
+
+<div
+  className="emotion-0"
+>
+  <p
+    className="emotion-1"
+  >
+    title
+  </p>
+  <button
+    className="emotion-2"
+    onClick={[MockFunction]}
+  >
+    <div
+      className="emotion-3"
+    >
+      <div
+        className="emotion-4"
+      >
+        <svg
+          className="lucide lucide-x"
+          fill="none"
+          height={24}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6 6 18"
+          />
+          <path
+            d="m6 6 12 12"
+          />
+        </svg>
+      </div>
+    </div>
+  </button>
+</div>
+`;

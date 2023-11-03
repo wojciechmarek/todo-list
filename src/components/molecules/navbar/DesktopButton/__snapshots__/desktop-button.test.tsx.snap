@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DesktopNavbarButton should match the snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0.75rem;
+  background-color: var(--navbar-settings-button-bg-color);
+  width: calc(100% - 1.5rem);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  border: var(--standard-border);
+  border-radius: var(--standard-border-radius);
+  box-shadow: var(--button-box-shadow);
+  cursor: pointer;
+}
+
+.emotion-0:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: var(--button-font-color);
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.emotion-2 {
+  height: calc(100% * 0.618);
+  width: calc(100% * 0.618);
+}
+
+.emotion-3 {
+  font-weight: 600;
+  color: var(--button-font-color);
+  display: none;
+}
+
+<div
+  className="emotion-0"
+  onClick={[MockFunction]}
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <span>
+        A
+      </span>
+    </div>
+  </div>
+  <p
+    className="emotion-3"
+  >
+    Click me
+  </p>
+</div>
+`;

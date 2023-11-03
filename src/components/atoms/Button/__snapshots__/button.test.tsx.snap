@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should match the snapshot 1`] = `
+.emotion-0 {
+  cursor: pointer;
+  -webkit-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+}
+
+.emotion-0:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+<button
+  className="emotion-0"
+  onClick={[MockFunction]}
+>
+  Button
+</button>
+`;
