@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/wojciechmarek/todo-list/compare/v0.0.1...v0.0.2) (2023-11-03)
+
+### Features
+
+- update readme ([dcf58da](https://github.com/wojciechmarek/todo-list/commits/dcf58da6a5150175a5aa9ef28f0bb2be35806961))
+
 ### [0.0.1](https://github.com/wojciechmarek/todo-list/compare/v0.0.0...v0.0.1) (2023-11-03)
 
 ## 0.0.0 (2023-11-03)
