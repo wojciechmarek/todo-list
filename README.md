@@ -4,7 +4,7 @@ This project represents modern UI design styles under a todo list app.
 
 ## Purpose
 
-Collect all design styles together in one place and learn how to implement them in CSS.
+To collect different design styles together in one place and learn how to implement them in the CSS.
 
 ## Demo
 
@@ -18,7 +18,7 @@ All design styles are written from scratch. This application does not use any UI
 - Modern Dark
 - Modern Light
 - Brutalism
-- Neobrutalism
+- Neobrutalism 👈 set as a default style
 - Cardboard
 - Glassmorphism
 - Claymorphism
