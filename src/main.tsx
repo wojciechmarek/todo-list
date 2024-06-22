@@ -6,8 +6,10 @@ import { ModalProvider, ThemeProvider } from './providers';
 import { StorageProvider } from './providers/Storage';
 import './styles/index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 if (import.meta.env.VERCEL_ENV === 'production') {
+  injectSpeedInsights();
   inject();
 }
 
