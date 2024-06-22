@@ -7,7 +7,9 @@ import { StorageProvider } from './providers/Storage';
 import './styles/index.css';
 import { BrowserRouter } from 'react-router-dom';
 
-inject();
+if (import.meta.env.VERCEL_ENV === 'production') {
+  inject();
+}
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
