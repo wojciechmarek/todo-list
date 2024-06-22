@@ -31,3 +31,15 @@
   --modal-box-shadow: 5px 5px 0 #000000;
   --backdrop-filter: 0;
 }
+
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: url('../../assets/fonts/Roboto-Black.ttf');
+}
+
+div[data-theme='bruthalism'] {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}

@@ -6,6 +6,6 @@ export interface LocalStorageState {
 }
 
 export const LocalStorageInitialState: LocalStorageState = {
-  theme: Theme.ModernDark,
+  theme: Theme.Neobruthalism,
   tasks: [],
 };

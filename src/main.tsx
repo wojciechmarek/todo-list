@@ -4,25 +4,23 @@ import { inject } from '@vercel/analytics';
 import { App } from './App';
 import { ModalProvider, ThemeProvider } from './providers';
 import { StorageProvider } from './providers/Storage';
-import './styles/index.css';
 import { BrowserRouter } from 'react-router-dom';
 import { injectSpeedInsights } from '@vercel/speed-insights';
+import { providerTreeBuilder } from './utilities/providers-tree-builder';
+import './styles/index.css';
 
-if (import.meta.env.VERCEL_ENV === 'production') {
-  injectSpeedInsights();
-  inject();
-}
+injectSpeedInsights();
+inject();
+
+const ProvidersTree = providerTreeBuilder([
+  [React.StrictMode],
+  [BrowserRouter],
+  [StorageProvider],
+  [ThemeProvider],
+  [ModalProvider],
+  [App],
+]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <StorageProvider>
-        <ThemeProvider>
-          <ModalProvider>
-            <App />
-          </ModalProvider>
-        </ThemeProvider>
-      </StorageProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+  <ProvidersTree />
 );

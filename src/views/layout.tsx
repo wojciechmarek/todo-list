@@ -5,6 +5,7 @@ import { LayoutStyle } from './layout.styled';
 
 export const Layout = () => {
   const { theme } = useThemeProvider();
+  console.log('set theme:', theme);
 
   return (
     <LayoutStyle data-theme={theme}>

@@ -38,9 +38,9 @@
 
 @font-face {
   font-family: Minecraft;
-  src: url('../../assets/fonts/Minecraft.ttf');
+  src: url('../../assets/fonts/minecraft.ttf');
 }
 
 div[data-theme='vfd-display'] {
-  font-family: Minecraft;
+  font-family: Minecraft, sans-serif;
 }

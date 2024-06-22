@@ -80,7 +80,7 @@ div[data-theme='crt']::after {
 
 div[data-theme='crt'] {
   animation: textShadow 1.6s infinite;
-  font-family: Teletext;
+  font-family: Teletext, sans-serif;
 }
 
 @keyframes flicker {
